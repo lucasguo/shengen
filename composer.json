@@ -39,12 +39,9 @@
         "yiisoft/yii2-faker": "*"
     },
     "config": {
-        "process-timeout": 1800
-    },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+        "process-timeout": 1800,
+	"fxp-asset": {
+            "enabled": false
         }
     },
     "scripts": {
@@ -54,7 +51,11 @@
         [{
             "type": "vcs",
             "url": "https://github.com/lucasguo/yii2-region"
+        },{
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
+	 
         ]
     
 }

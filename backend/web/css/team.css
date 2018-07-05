@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+#team {
+	display: none;
+}
+
+.node > a {
+	color: white;
+}
+#intro-new:before {
+	content: " ";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #f39c12;
+}
+#intro-bought:before {
+	content: " ";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #00a65a;
+}
+#chart-container .node {
+	width: 96px;
+	height: inherit;
+	padding-bottom: 10px;
+	background: #ccc;
+	line-height: 30px;
+	color: white;
+}

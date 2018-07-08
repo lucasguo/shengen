@@ -23,25 +23,25 @@
 // 	                	'url' => '#',
 // 	                	'visible' => Yii::$app->user->can('addCustomer'),
 // 	                	'items' => [
-		                	['label' => '我的客户', 'icon' => 'fa fa-star', 'url' => ['/customer/index'], 'visible' => Yii::$app->user->can('addCustomer')],
+		                	['label' => '我的客户', 'icon' => 'star', 'url' => ['/customer/index'], 'visible' => Yii::$app->user->can('addCustomer')],
 // 		                	['label' => '我的团队', 'url' => ['/customer/my-team'], 'visible' => Yii::$app->user->can('addCustomer')],
 // 		                	['label' => '我的收益', 'url' => ['/customer/my-money'], 'visible' => Yii::$app->user->can('addCustomer')],
 // 	                	],
 //                 	],
                 	[
                 		'label' => '客户管理', 
-                		'icon' => 'fa fa-search-plus', 
+                		'icon' => 'search-plus', 
                 		'url' => '#',
                 		'visible' => (Yii::$app->user->can('updateCustomer') || Yii::$app->user->can('maintainDealerShop') || Yii::$app->user->can('viewAllCardBuyer')),
                 		'items' => [
                 			['label' => '客户管理', 'url' => ['/customer/all-index'], 'visible' => Yii::$app->user->can('updateCustomer')],
-                            ['label' => '办卡客户管理', 'url' => ['/card-buyer/all-index'], 'visible' => Yii::$app->user->can('viewAllCardBuyer')],
+                            		['label' => '办卡客户管理', 'url' => ['/card-buyer/all-index'], 'visible' => Yii::$app->user->can('viewAllCardBuyer')],
                    			['label' => '经销商门店管理', 'url' => ['/dealer-shop/index'], 'visible' => Yii::$app->user->can('maintainDealerShop')],
                 		],
                 	],
                     [
                         'label' => '门店管理',
-                        'icon' => 'fa fa-home',
+                        'icon' => 'home',
                         'url' => '#',
                         'visible' => (Yii::$app->user->can('addCardBuyer') || Yii::$app->user->can('viewOwnCardBuyer') || Yii::$app->user->can('addEmployee')),
                         'items' => [
@@ -53,7 +53,7 @@
                     ],
                 	[
 	                	'label' => '仪器管理',
-	                	'icon' => 'fa fa-cubes',
+	                	'icon' => 'cubes',
 	                	'url' => '#',
 	                	'visible' => Yii::$app->user->can('manageMachine'),
 	                	'items' => [
@@ -62,12 +62,12 @@
 	                		['label' => '配件管理', 'url' => ['/part/index'], 'visible' => Yii::$app->user->can('manageMachine')],
 	                	],
                 	],
-                	['label' => '订单管理', 'icon' => 'fa fa-file-text', 'url' => ['/order/index'], 'visible' => (Yii::$app->user->can('addOrder') || Yii::$app->user->can('updateOrder'))],
-                    ['label' => '文章管理', 'icon' => 'fa fa-book', 'url' => ['/article/index'], 'visible' => (Yii::$app->user->can('maintainArticle'))],
-                    ['label' => '用户管理', 'icon' => 'fa fa-users', 'url' => ['/user/index'], 'visible' => Yii::$app->user->can('manageUser')],
+                	['label' => '订单管理', 'icon' => 'file-text', 'url' => ['/order/index'], 'visible' => (Yii::$app->user->can('addOrder') || Yii::$app->user->can('updateOrder'))],
+                    ['label' => '文章管理', 'icon' => 'book', 'url' => ['/article/index'], 'visible' => (Yii::$app->user->can('maintainArticle'))],
+                    ['label' => '用户管理', 'icon' => 'users', 'url' => ['/user/index'], 'visible' => Yii::$app->user->can('manageUser')],
                 	[
 	                	'label' => '财务管理',
-	                	'icon' => 'fa fa-money',
+	                	'icon' => 'money',
 	                	'url' => '#',
 	                	'visible' => (Yii::$app->user->can('addFinance') || Yii::$app->user->can('updateFinance') || Yii::$app->user->can('viewFinance')),
 	                	'items' => [
@@ -77,10 +77,10 @@
 	                		['label' => '财务报表', 'url' => ['/finance/default/chart'], 'visible' => Yii::$app->user->can('viewFinance')],
 	                	],
                 	],
-                	['label' => '内部文件', 'icon' => 'fa fa-file-word-o', 'url' => ['/meeting-record/index'], 'visible' => Yii::$app->user->can('meetingRecord')],
+                	['label' => '内部文件', 'icon' => 'file-word-o', 'url' => ['/meeting-record/index'], 'visible' => Yii::$app->user->can('meetingRecord')],
                 	[
 	                	'label' => '系统设置',
-	                	'icon' => 'fa fa-gears',
+	                	'icon' => 'gears',
 	                	'url' => '#',
 	                	'visible' => Yii::$app->user->can('manageProduct'),
 	                	'items' => [

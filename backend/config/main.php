@@ -49,7 +49,7 @@ return [
     	],
     	'user' => [
     		'identityClass' => 'common\models\User',
-    		'authTimeout' => 120,
+    		'authTimeout' => 600,
     	],
         'assetManager' => [
             'baseUrl' => YII_DEBUG ? '@web/assets' : $qiniu['domain'],

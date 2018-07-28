@@ -8,7 +8,7 @@ use backend\models\CustomerNew;
 
 $typeName = $model->getTypeLabel();
 $this->title = '更新' . $typeName . ': ' . $model->customer_name;
-$this->params['breadcrumbs'][] = ['label' => $typeName, 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $typeName, 'url' => ['index', 'type' => $model->customer_type]];
 $this->params['breadcrumbs'][] = ['label' => $model->customer_name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = '更新';
 ?>

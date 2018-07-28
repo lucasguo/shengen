@@ -12,8 +12,6 @@ use yii\behaviors\BlameableBehavior;
  * @property integer $id
  * @property string $content
  * @property integer $customer_id
- * @property integer $alert_date
- * @property integer $alert_time
  * @property integer $created_by
  * @property integer $updated_by
  * @property integer $created_at
@@ -46,9 +44,9 @@ class CustomerMaintainNew extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['content', 'customer_id', 'alert_date', 'alert_time', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'required'],
+            [['content', 'customer_id'], 'required'],
             [['content'], 'string'],
-            [['customer_id', 'alert_date', 'alert_time', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
+            [['customer_id', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
         ];
     }
 
@@ -59,31 +57,10 @@ class CustomerMaintainNew extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'content' => 'Content',
+            'content' => '提醒内容',
             'customer_id' => 'Customer ID',
-            'alert_date' => 'Alert Date',
-            'alert_time' => 'Alert Time',
-            'created_by' => 'Created By',
-            'updated_by' => 'Updated By',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_at' => '创建于',
+            'updated_at' => '更新于',
         ];
-    }
-
-    /**
-     * @return array
-     */
-    public static function getStatusList()
-    {
-    	return [
-    	];
-    }
-    
-    /**
-     * @return string
-     */
-    public function getStatusLabel()
-    {
-    	return self::getStatusList()[$this->status];
     }
 }

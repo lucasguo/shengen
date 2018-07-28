@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\CustomerNew */
 $typeName = $model->getTypeLabel();
 $this->title = $typeName . ':' . $model->customer_name;
-$this->params['breadcrumbs'][] = ['label' => $typeName, 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $typeName, 'url' => ['index', 'type' => $model->customer_type]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-new-view">
@@ -43,6 +44,34 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
     	</div>
+    </div>
+
+    <h4>维护记录</h4>
+    <div class="box">
+        <div class="box-body">
+            <?= GridView::widget([
+                'dataProvider' => $dataProvider,
+                'columns' => [
+                    [
+                        'attribute' => 'username',
+                        'format' => 'text',
+                        'label' => '填写人',
+                        'headerOptions' => ['class' => 'hidden-xs'],
+                        'filterOptions' => ['class' => 'hidden-xs'],
+                        'contentOptions' => ['class' => 'hidden-xs'],
+                    ],
+                    [
+                        'attribute' => 'created_at',
+                        'format' => 'datetime',
+                        'label' => '填写日期',
+                        'headerOptions' => ['class' => 'hidden-xs'],
+                        'filterOptions' => ['class' => 'hidden-xs'],
+                        'contentOptions' => ['class' => 'hidden-xs'],
+                    ],
+                    'content:ntext:内容',
+                ],
+            ]) ?>
+        </div>
     </div>
 
 </div>

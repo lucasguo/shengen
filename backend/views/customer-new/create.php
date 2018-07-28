@@ -9,7 +9,7 @@ use backend\models\CustomerNew;
 
 $typeName = CustomerNew::getTypeLabelFromCode($type);
 $this->title = '创建' . $typeName;
-$this->params['breadcrumbs'][] = ['label' => $typeName, 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $typeName, 'url' => ['index', 'type' => $type]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-new-create">

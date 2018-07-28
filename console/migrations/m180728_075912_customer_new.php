@@ -37,13 +37,13 @@ class m180728_075912_customer_new extends Migration
             'id' => $this->primaryKey(),
             'content' => $this->text()->notNull(),
             'customer_id' => $this->integer()->notNull(),
-            'alert_date' => $this->integer()->notNull(),
-            'alert_time' => $this->integer()->notNull(),
             'created_by' => $this->integer()->notNull(),
             'updated_by' => $this->integer()->notNull(),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->addColumn('alert', 'alert_time', 'integer');
     }
 
     /**
@@ -53,6 +53,7 @@ class m180728_075912_customer_new extends Migration
     {
         $this->dropTable('customer_new');
         $this->dropTable('customer_maintain_new');
+        $this->dropColumn('alert', 'alert_time');
         return true;
     }
 

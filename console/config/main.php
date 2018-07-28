@@ -21,6 +21,12 @@ return [
                 ],
             ],
         ],
+        'wechat' => [
+            'class' => 'callmez\wechat\sdk\Wechat',
+            'appId' => 'wxc64f2d010c5c30b9',
+            'appSecret' => '6a60e49592ae91d91804c41b5ca096a7',
+            'token' => '',
+        ],
     ],
     'params' => $params,
 ];

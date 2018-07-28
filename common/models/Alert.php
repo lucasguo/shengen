@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
@@ -13,6 +13,7 @@ use yii\behaviors\BlameableBehavior;
  * @property string $content
  * @property integer $userid
  * @property string $alert_date
+ * @property string $alert_time
  * @property integer $created_by
  * @property integer $updated_by
  * @property integer $created_at
@@ -47,7 +48,7 @@ class Alert extends \yii\db\ActiveRecord
         return [
             [['content', 'userid'], 'required'],
             [['content'], 'string'],
-            [['userid', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
+            [['userid', 'alert_time', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
             [['alert_date'], 'safe'],
         ];
     }

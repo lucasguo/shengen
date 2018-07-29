@@ -30,7 +30,8 @@
 		"callmez/yii2-wechat-sdk": "dev-master",
 		"chocoboxxf/yii2-qiniu-sdk": "dev-master",
 		"chenkby/yii2-region": "dev-master",
-        "2amigos/yii2-ckeditor-widget" : "~1.0"
+        "2amigos/yii2-ckeditor-widget" : "~1.0",
+        "philippfrenzel/yii2fullcalendar":"*"
     },
     "require-dev": {
         "codeception/codeception": "*",

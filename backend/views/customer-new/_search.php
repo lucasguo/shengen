@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'customer_mobile') ?>
 
-    <?= $form->field($model, 'customer_company') ?>
+    <?= $form->field($model, 'customer_company')->label(\backend\models\CustomerNew::getTypeCompanyLabelFromCode($type)) ?>
 
     <?= $form->field($model, 'customer_job') ?>
 

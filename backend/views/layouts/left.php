@@ -25,6 +25,7 @@ use backend\models\CustomerNew;
 		            ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_COMPANY), 'icon' => 'address-book', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_COMPANY]],
                     ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_HOSPITAL), 'icon' => 'address-book-o', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_HOSPITAL]],
                     ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_PATIENT), 'icon' => 'blind', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_PATIENT]],
+                    ['label' => '备忘日历', 'icon' => 'calendar-check-o', 'url' => ['/customer-new/calendar']],
 //                	[
 //                		'label' => '客户管理',
 //                		'icon' => 'search-plus',

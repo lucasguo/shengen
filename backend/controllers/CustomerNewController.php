@@ -13,6 +13,7 @@ use yii\filters\AccessControl;
 use yii\data\SqlDataProvider;
 use backend\models\CustomerMaintainNew;
 use common\models\Alert;
+use yii2fullcalendar\models\Event;
 
 /**
  * CustomerNewController implements the CRUD actions for CustomerNew model.
@@ -127,9 +128,10 @@ class CustomerNewController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        $model = $this->findModel($id);
+        $type = $model->customer_type;
+        $model->delete();
+        return $this->redirect(['index', 'type' => $type]);
     }
 
     /**
@@ -183,6 +185,21 @@ class CustomerNewController extends Controller
         return $this->render('maintain', [
             'model' => $model,
             'customerName' => $customerName,
+        ]);
+    }
+
+    public function actionCalendar() {
+        $alerts = Alert::find()->all();
+        $events = [];
+        foreach ($alerts as $alert) {
+            $event = new Event();
+            $event->id = $alert->id;
+            $event->title = $alert->content;
+            $event->start = date('Y-m-d\TH:i:s\Z',strtotime($alert->alert_date . ' ' . $alert->alert_time . ':00:00'));
+            $events[] = $event;
+        }
+        return $this->render('calendar', [
+            'events' => $events,
         ]);
     }
 }

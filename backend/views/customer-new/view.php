@@ -47,6 +47,9 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <h4>维护记录</h4>
+    <p>
+        <?= Html::a('添加维护记录', ['maintain', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
+    </p>
     <div class="box">
         <div class="box-body">
             <?= GridView::widget([

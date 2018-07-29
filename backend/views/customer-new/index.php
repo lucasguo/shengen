@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update} {delete} {add}',
+                'template' => '{view} {update} {add} {delete}',
                 'buttons' => [
                     'view' => function ($url, $model, $key) {
                         return Html::a('【明细】', $url);

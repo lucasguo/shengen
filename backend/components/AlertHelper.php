@@ -3,7 +3,7 @@ namespace backend\components;
 
 use Yii;
 use yii\base\Component;
-use backend\models\Alert;
+use common\models\Alert;
 
 class AlertHelper extends Component
 {

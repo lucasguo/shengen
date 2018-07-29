@@ -23,7 +23,7 @@ class AlertController extends Controller
         $time = intval(date('H'));
         $alerts = Alert::findAll(['alert_date' => $today, 'alert_time' => $time]);
         if ($alerts == null || count($alerts) <= 0) {
-            echo "没有需要提醒的数据";
+            Yii::error("没有需要提醒的数据");
             return;
         }
         foreach ($alerts as $alert) {
@@ -53,8 +53,17 @@ class AlertController extends Controller
                         "value" => $alert->content,
                     ]
                 ];
-                Yii::$app->wechat->sendTemplateMessage($connect->openid, self::TEMPLATE_ID, $data);
+                $result = Yii::$app->wechat->sendTemplateMessage($connect->openid, self::TEMPLATE_ID, $data);
+                if ($result) {
+                    Yii::error("ID为" . $alert->id . "的通知已发送");
+                } else {
+                    Yii::error("ID为" . $alert->id . "的通知发送失败");
+                }
             }
         }
+    }
+
+    public function actionTest() {
+        Yii::error("开始工作");
     }
 }

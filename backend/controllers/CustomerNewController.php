@@ -153,7 +153,7 @@ class CustomerNewController extends Controller
         $customer = $this->findModel($id);
         $customerName = $customer->customer_name;
         $model = new CustomerMaintainNewForm();
-        $model->alert_time = date('H');
+        $model->alert_time = intval(date('H'));
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {

@@ -11,9 +11,9 @@ class m170218_070311_dealer_permission extends Migration
 		$employee = $auth->createRole('dealerEmployee');
 		$employee->description = '门店经销商员工';
 		$auth->add($employee);
-		$dealer = $auth->getRole('dealer');
+		$dealer = $auth->createRole('dealer');
 		$dealer->description = '门店经销商';
-		$auth->update('dealer', $dealer);
+		$auth->add($dealer);
 		$admin = $auth->getRole('administrator');
 		echo " done \n";
 		

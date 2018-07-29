@@ -189,7 +189,7 @@ class CustomerNewController extends Controller
     }
 
     public function actionCalendar() {
-        $alerts = Alert::find()->all();
+        $alerts = Alert::findAll(['userid' => Yii::$app->user->id]);
         $events = [];
         foreach ($alerts as $alert) {
             $event = new Event();

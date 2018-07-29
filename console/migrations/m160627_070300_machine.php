@@ -20,6 +20,14 @@ class m160627_070300_machine extends Migration
         	'created_at' => $this->integer()->notNull(),
         	'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->insert('machine_product', [
+            'product_code' => 'DLS',
+            'product_name' => '大力神',
+            'product_status' => \backend\models\MachineProduct::STATUS_ACTIVE,
+            'created_at' => time(),
+            'updated_at' => time(),
+        ]);
         
         $this->createTable('machine', [
             'id' => $this->primaryKey(),

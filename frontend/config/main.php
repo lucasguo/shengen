@@ -33,7 +33,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'assetManager' => [
-            'baseUrl' => YII_DEBUG ? '@web/assets' : $qiniu['frontend-domain'],
+            'baseUrl' => '@web/assets',
             'bundles' => [
                 'yii\bootstrap\BootstrapPluginAsset' => [
                     'js'=>[]

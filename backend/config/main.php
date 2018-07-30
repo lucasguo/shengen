@@ -52,7 +52,7 @@ return [
     		'authTimeout' => 600,
     	],
         'assetManager' => [
-            'baseUrl' => YII_DEBUG ? '@web/assets' : $qiniu['domain'],
+            'baseUrl' => '@web/assets',
         ],
         /*
         'urlManager' => [

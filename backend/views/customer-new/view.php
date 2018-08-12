@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use yii\grid\GridView;
+use kartik\grid\GridView;
+
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\CustomerNew */
@@ -54,12 +55,13 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="box-body">
             <?= GridView::widget([
                 'dataProvider' => $dataProvider,
+                'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed'],
+                'headerRowOptions' => ['class' => 'hidden-xs'],
                 'columns' => [
                     [
                         'attribute' => 'username',
                         'format' => 'text',
                         'label' => '填写人',
-                        'headerOptions' => ['class' => 'hidden-xs'],
                         'filterOptions' => ['class' => 'hidden-xs'],
                         'contentOptions' => ['class' => 'hidden-xs'],
                     ],
@@ -67,11 +69,12 @@ $this->params['breadcrumbs'][] = $this->title;
                         'attribute' => 'created_at',
                         'format' => 'datetime',
                         'label' => '填写日期',
-                        'headerOptions' => ['class' => 'hidden-xs'],
-                        'filterOptions' => ['class' => 'hidden-xs'],
-                        'contentOptions' => ['class' => 'hidden-xs'],
                     ],
-                    'content:ntext:内容',
+                    [
+                        'attribute' => 'content',
+                        'format' => 'ntext',
+                        'contentOptions' => ['class' => 'wrap-content'],
+                    ],
                 ],
             ]) ?>
         </div>

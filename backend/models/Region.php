@@ -41,6 +41,11 @@ class Region extends \yii\db\ActiveRecord
     	return ArrayHelper::map($result, 'id', 'name');
     }
 
+    public static function getFujianCities()
+    {
+        return self::getRegion(16);
+    }
+
     /**
      * @inheritdoc
      */

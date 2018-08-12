@@ -158,3 +158,12 @@ a.desc:after {
     background-color: white;
 }
 
+.table-fixed {
+    table-layout: fixed;
+}
+
+.table-responsive > .table > tbody > tr > td.wrap-content {
+    white-space: initial;
+    word-break: break-all;
+}
+

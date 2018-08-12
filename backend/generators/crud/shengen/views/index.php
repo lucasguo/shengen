@@ -26,10 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
 
 <?php if(!empty($generator->searchModelClass)): ?>
-<?= "    <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
+    <div id="search_container" style="display: none">
+<?= "    <?php " ?>echo $this->render('_search', ['model' => $searchModel]); ?>
+    </div>
 <?php endif; ?>
 
     <p>
+        <?= "<?= " ?>Html::button('搜索开关', ['class' => 'btn btn-primary', 'id' => 'search_toggle']) ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Create ' . Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>, ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <div class="box">
@@ -38,8 +41,13 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?= " ?>GridView::widget([
         'dataProvider' => $dataProvider,
-        <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n        'columns' => [\n" : "'columns' => [\n"; ?>
-            ['class' => 'yii\grid\SerialColumn'],
+        'filterModel' => null,
+        'headerRowOptions' => ['class' => 'hidden-xs'],
+        <?=  "'columns' => [\n"; ?>
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'contentOptions' => ['class' => 'hidden-xs'],
+            ],
 
 <?php
 $count = 0;
@@ -63,7 +71,25 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 }
 ?>
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'kartik\grid\ActionColumn',
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model, $key) {
+                        return Html::a('【明细】', $url);
+                    },
+                    'update' => function ($url, $model, $key) {
+                        return Html::a('【修改】', $url);
+                    },
+                    'delete' => function ($url, $model, $key) {
+                        $options = [
+                        'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
+                        'data-method' => 'post',
+                        ];
+                        return Html::a('【删除】', $url, $options);
+                    },
+                ],
+            ],
         ],
     ]); ?>
 <?php else: ?>
@@ -79,3 +105,10 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 </div>
 </div>
 </div>
+<?= "<?php\n" ?>
+$toggleScript = <<<JS
+$( "#search_toggle" ).click(function() {
+  $( "#search_container" ).toggle( "fast");
+});
+JS;
+$this->registerJs($toggleScript);

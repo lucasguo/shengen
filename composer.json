@@ -24,6 +24,7 @@
 		"kartik-v/yii2-date-range": "dev-master",
 		"kartik-v/yii2-mpdf": "@dev",
         "kartik-v/yii2-dialog": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
 		"driftyco/ionicons": "*",
 		"moonlandsoft/yii2-phpexcel": "*",
 		"miloschuman/yii2-highcharts-widget": "dev-master",

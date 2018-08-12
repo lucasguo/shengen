@@ -29,21 +29,33 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => null,
         'headerRowOptions' => ['class' => 'hidden-xs'],
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'yii\grid\SerialColumn',
+            'contentOptions' => ['class' => 'hidden-xs'],],
 
             'customer_name',
             [
                 'attribute' => 'customer_company',
-                'label' =>  CustomerNew::getTypeCompanyLabelFromCode($type)
+                'label' =>  CustomerNew::getTypeCompanyLabelFromCode($type),
+                'contentOptions' => ['class' => 'hidden-xs'],
             ],
-            'customer_job',
-            'customer_mobile',
-            'comment:ntext',
+            [
+                'attribute' => 'customer_job',
+                'contentOptions' => ['class' => 'hidden-xs'],
+            ],
+            [
+                'attribute' => 'customer_mobile',
+                'contentOptions' => ['class' => 'hidden-xs'],
+            ],
+            [
+                'attribute' => 'comment',
+                'format' => 'ntext',
+                'contentOptions' => ['class' => 'hidden-xs'],
+            ],
             // 'created_at',
             // 'updated_at',
 
             [
-                'class' => 'yii\grid\ActionColumn',
+                'class' => 'kartik\grid\ActionColumn',
                 'template' => '{view} {update} {add} {delete}',
                 'buttons' => [
                     'view' => function ($url, $model, $key) {

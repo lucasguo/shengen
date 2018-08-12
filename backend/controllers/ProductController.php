@@ -28,7 +28,7 @@ class ProductController extends Controller
         		'rules' => [
         			[
         				'allow' => true,
-        				'roles' => ['manageProduct'],
+        				'roles' => ['adminSite'],
         			]
         		],
         	],

@@ -20,7 +20,7 @@ use yii\bootstrap\ActiveForm;
 
     <?= $form->field($model, 'customer_job')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'comment')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'comment')->textarea(['rows' => 4]) ?>
 
     <?= Html::activeHiddenInput($model, 'customer_type') ?>
 

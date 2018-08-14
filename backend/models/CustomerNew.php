@@ -5,6 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "customer_new".
@@ -15,6 +16,7 @@ use yii\behaviors\BlameableBehavior;
  * @property string $customer_company
  * @property string $customer_job
  * @property string $comment
+ * @property integer $city_id
  * @property integer $customer_type
  * @property integer $created_at
  * @property integer $updated_at
@@ -26,6 +28,13 @@ class CustomerNew extends \yii\db\ActiveRecord
     const TYPE_HOSPITAL = 0;
     const TYPE_COMPANY = 1;
     const TYPE_PATIENT = 2;
+
+    public $hospital_id;
+    public $hospital_ids;
+    /**
+     * @var CustomerNewExtend
+     */
+    public $extend;
 
 	/**
 	 * (non-PHPdoc)
@@ -54,7 +63,7 @@ class CustomerNew extends \yii\db\ActiveRecord
         return [
             [['customer_name', 'customer_mobile'], 'required'],
             [['comment'], 'string'],
-            [['created_at', 'updated_at'], 'integer'],
+            [['created_at', 'updated_at', 'city_id', 'hospital_id'], 'integer'],
             [['customer_name'], 'string', 'max' => 10],
             [['customer_mobile'], 'string', 'max' => 15],
             [['customer_company'], 'string', 'max' => 50],
@@ -75,6 +84,9 @@ class CustomerNew extends \yii\db\ActiveRecord
             'customer_mobile' => '手机',
             'customer_company' => '公司',
             'customer_job' => '职位',
+            'city_id' => '所在地区',
+            'hospital_id' => '关联医院',
+            'hospital_ids' => '关联医院',
             'comment' => '备注',
             'created_at' => '创建于',
             'updated_at' => '更新于',
@@ -87,9 +99,9 @@ class CustomerNew extends \yii\db\ActiveRecord
     public static function getTypeList()
     {
         return [
-            self::TYPE_COMPANY => '经销商客户',
+            self::TYPE_COMPANY => '经销客户',
             self::TYPE_HOSPITAL => '医院客户',
-            self::TYPE_PATIENT => '患者'
+            self::TYPE_PATIENT => '肝病患者'
         ];
     }
 
@@ -100,7 +112,7 @@ class CustomerNew extends \yii\db\ActiveRecord
     {
         return [
             self::TYPE_COMPANY => '公司',
-            self::TYPE_HOSPITAL => '医院',
+            self::TYPE_HOSPITAL => '科室',
             self::TYPE_PATIENT => '地址'
         ];
     }
@@ -121,5 +133,83 @@ class CustomerNew extends \yii\db\ActiveRecord
     public static function getTypeCompanyLabelFromCode($code)
     {
         return self::getTypeCompanyList()[$code];
+    }
+
+    public function getHospital()
+    {
+        $mapping = CustomerHospitalMapping::findOne(['customer_id' => $this->id]);
+        if ($mapping != null) {
+            return Hospital::getHospitalNameById($mapping->hospital_id);
+        }
+        return null;
+    }
+
+    public function getHospitals()
+    {
+        $mapping = CustomerHospitalMapping::findAll(['customer_id' => $this->id]);
+        if ($mapping != null) {
+            $names = [];
+            foreach ($mapping as $hospital) {
+                $names[] = Hospital::getHospitalNameById($hospital->hospital_id);
+            }
+            return join(", ", $names);
+        }
+        return null;
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        CustomerHospitalMapping::deleteAll(['customer_id' => $this->id]);
+        if ($this->customer_type == CustomerNew::TYPE_COMPANY && $this->hospital_ids != null) {
+            foreach ($this->hospital_ids as $id) {
+                $mapping = new CustomerHospitalMapping();
+                $mapping->customer_id = $this->id;
+                $mapping->hospital_id = $id;
+                $mapping->save();
+            }
+        } else if($this->hospital_id != null) {
+            $mapping = new CustomerHospitalMapping();
+            $mapping->customer_id = $this->id;
+            $mapping->hospital_id = $this->hospital_id;
+            $mapping->save();
+        }
+        if ($this->customer_type == CustomerNew::TYPE_PATIENT) {
+            $oldExtend = CustomerNewExtend::findOne(['customer_id' => $this->id]);
+            if ($oldExtend == null) {
+                $oldExtend = new CustomerNewExtend();
+                $oldExtend->customer_id = $this->id;
+            }
+            $oldExtend->copyFromScreen($this->extend);
+            $oldExtend->save();
+        }
+    }
+
+    public function afterFind()
+    {
+        parent::afterFind();
+        if ($this->customer_type == CustomerNew::TYPE_COMPANY) {
+            $hospitalList = CustomerHospitalMapping::findAll(['customer_id' => $this->id]);
+            if ($hospitalList != null) {
+                $this->hospital_ids = ArrayHelper::getColumn($hospitalList, 'hospital_id');
+            }
+        } else {
+            $hospital = CustomerHospitalMapping::findOne(['customer_id' => $this->id]);
+            if ($hospital != null) {
+                $this->hospital_id = $hospital->hospital_id;
+            }
+        }
+    }
+
+    public function afterDelete() {
+        parent::afterDelete();
+        CustomerHospitalMapping::deleteAll(['customer_id' => $this->id]);
+        CustomerNewExtend::deleteAll(['customer_id' => $this->id]);
+    }
+
+    public static function getAllDoctors()
+    {
+        $result = static::find()->where(['customer_type'=> CustomerNew::TYPE_HOSPITAL])->asArray()->all();
+        return ArrayHelper::map($result, 'id', 'customer_name');
     }
 }

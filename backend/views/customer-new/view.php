@@ -37,6 +37,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => \backend\models\CustomerNew::getTypeCompanyLabelFromCode($model->customer_type)
             ],
             'customer_job',
+            [
+                'attribute' => 'hospital_id',
+                'value' => $model->getHospital(),
+                'label' => '关联医院'
+            ],
             'comment:ntext',
             [
                 'attribute' => 'created_at',
@@ -73,6 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'attribute' => 'content',
                         'format' => 'ntext',
+                        'label' => '维护内容',
                         'contentOptions' => ['class' => 'wrap-content'],
                     ],
                 ],

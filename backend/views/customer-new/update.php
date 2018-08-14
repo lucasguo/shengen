@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = '更新';
     	<div class="box-body">
     <?= $this->render('_form', [
         'model' => $model,
+        'extend' => $extend,
     ]) ?>
     	</div>
     </div>

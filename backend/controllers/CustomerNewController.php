@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use backend\models\CustomerMaintainNewForm;
+use backend\models\CustomerNewExtend;
 use Yii;
 use backend\models\CustomerNew;
 use backend\models\CustomerNewSearch;
@@ -30,6 +31,15 @@ class CustomerNewController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
                 ],
             ],
         ];
@@ -79,6 +89,7 @@ class CustomerNewController extends Controller
         ]);
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'extend' => CustomerNewExtend::findOne(['customer_id' => $id]),
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -87,13 +98,18 @@ class CustomerNewController extends Controller
     {
         $model = new CustomerNew();
         $model->customer_type = $type;
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $modelLoaded = $model->load(Yii::$app->request->post());
+        $extend = new CustomerNewExtend();
+        if ($extend->load(Yii::$app->request->post())) {
+            $model->extend = $extend;
+        }
+        if ($modelLoaded && $model->save()) {
             Yii::$app->session->setFlash('success', '成功添加' . $model->customer_name);
             return $this->redirect(['index', 'type' => $model->customer_type]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'extend' => $extend,
                 'type' => $type,
             ]);
         }
@@ -108,13 +124,21 @@ class CustomerNewController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $modelLoaded = $model->load(Yii::$app->request->post());
+        $extend = CustomerNewExtend::findOne(['customer_id' => $id]);
+        if ($extend == null) {
+            $extend = new CustomerNewExtend();
+        }
+        if ($extend->load(Yii::$app->request->post())) {
+            $model->extend = $extend;
+        }
+        if ($modelLoaded && $model->save()) {
             Yii::$app->session->setFlash('success', '成功更新' . $model->customer_name);
             return $this->redirect(['index', 'type' => $model->customer_type]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'extend' => $extend,
                 'type' => $model->customer_type,
             ]);
         }

@@ -12,6 +12,7 @@ use backend\models\CustomerNew;
  */
 class CustomerNewSearch extends CustomerNew
 {
+    public $hospital_list;
     /**
      * @inheritdoc
      */
@@ -19,7 +20,7 @@ class CustomerNewSearch extends CustomerNew
     {
         return [
             [['id', 'created_at', 'updated_at'], 'integer'],
-            [['customer_name', 'customer_mobile', 'customer_company', 'customer_job', 'comment'], 'safe'],
+            [['customer_name', 'customer_mobile', 'customer_company', 'customer_job', 'comment', 'hospital_list'], 'safe'],
         ];
     }
 
@@ -32,6 +33,13 @@ class CustomerNewSearch extends CustomerNew
         return Model::scenarios();
     }
 
+    public function attributeLabels()
+    {
+        $labels =  parent::attributeLabels();
+        $labels['hospital_list'] = '关联医院';
+        return $labels;
+    }
+
     /**
      * Creates data provider instance with search query applied
      *
@@ -41,7 +49,7 @@ class CustomerNewSearch extends CustomerNew
      */
     public function search($params)
     {
-        $query = CustomerNew::find();
+        $query = CustomerNew::find()->distinct()->leftJoin(CustomerHospitalMapping::tableName(), [CustomerNew::tableName() . '.id' => CustomerHospitalMapping::tableName() . '.customer_id']);
 
         // add conditions that should always apply here
 
@@ -66,11 +74,19 @@ class CustomerNewSearch extends CustomerNew
             'customer_type' => $this->customer_type,
         ]);
 
+        $hospitals = [];
+        if (is_array($this->hospital_list)) {
+            foreach ($this->hospital_list as $key => $value) {
+                $hospitals[] = $value;
+            }
+        }
+
         $query->andFilterWhere(['like', 'customer_name', $this->customer_name])
             ->andFilterWhere(['like', 'customer_mobile', $this->customer_mobile])
             ->andFilterWhere(['like', 'customer_company', $this->customer_company])
             ->andFilterWhere(['like', 'customer_job', $this->customer_job])
-            ->andFilterWhere(['like', 'comment', $this->comment]);
+            ->andFilterWhere(['like', 'comment', $this->comment])
+            ->andFilterWhere(['in', 'hospital_id', $hospitals]);
 
         return $dataProvider;
     }

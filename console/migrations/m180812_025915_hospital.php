@@ -31,8 +31,6 @@ class m180812_025915_hospital extends Migration
             'updated_by' => $this->integer()->notNull(),
         ], $tableOptions);
 
-        $this->addColumn('customer_new', 'hospital_id', 'INTEGER');
-
         $auth = \Yii::$app->authManager;
         $adminSite = $auth->createPermission('adminSite');
         $adminSite->description = '站点基础信息管理';
@@ -47,7 +45,6 @@ class m180812_025915_hospital extends Migration
     public function safeDown()
     {
         $this->dropTable('hospital');
-        $this->dropColumn('customer_new', 'hospital_id');
 
         $auth = \Yii::$app->authManager;
         $adminSite = $auth->getPermission('adminSite');

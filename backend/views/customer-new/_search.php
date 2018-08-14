@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\select2\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\CustomerNewSearch */
@@ -21,7 +22,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'customer_company')->label(\backend\models\CustomerNew::getTypeCompanyLabelFromCode($type)) ?>
 
-    <?= $form->field($model, 'customer_job') ?>
+    <?= $form->field($model, 'hospital_list')->widget(Select2::classname(), [
+        'data' => \backend\models\Hospital::getHospitalList(),
+        'options' => ['placeholder' => '选择医院', 'multiple' => true],
+        'pluginOptions' => [
+            'allowClear' => true,
+        ],
+    ]); ?>
 
     <?php // echo $form->field($model, 'comment') ?>
 

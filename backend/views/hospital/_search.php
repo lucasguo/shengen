@@ -22,7 +22,6 @@ use yii\web\JsExpression;
         'options' => ['placeholder' => '选择城市', 'multiple' => true],
         'pluginOptions' => [
             'allowClear' => true,
-            'templateResult' => new JsExpression('function(city) { return city.text; }'),
         ],
     ]); ?>
 

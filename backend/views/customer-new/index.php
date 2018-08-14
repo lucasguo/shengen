@@ -39,16 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'contentOptions' => ['class' => 'hidden-xs'],
             ],
             [
-                'attribute' => 'customer_job',
-                'contentOptions' => ['class' => 'hidden-xs'],
-            ],
-            [
                 'attribute' => 'customer_mobile',
-                'contentOptions' => ['class' => 'hidden-xs'],
-            ],
-            [
-                'attribute' => 'comment',
-                'format' => 'ntext',
                 'contentOptions' => ['class' => 'hidden-xs'],
             ],
             // 'created_at',

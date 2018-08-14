@@ -5,6 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "hospital".
@@ -77,5 +78,20 @@ class Hospital extends \yii\db\ActiveRecord
     public function getCityRegion()
     {
         return $this->hasOne(Region::className(), ['id' => 'hospital_city']);
+    }
+
+    public static function getHospitalList()
+    {
+        $result = static::find()->asArray()->all();
+        return ArrayHelper::map($result, 'id', 'hospital_name');
+    }
+
+    public static function getHospitalNameById($id)
+    {
+        $result = static::findOne($id);
+        if($result != null) {
+            return $result->hospital_name;
+        }
+        return null;
     }
 }

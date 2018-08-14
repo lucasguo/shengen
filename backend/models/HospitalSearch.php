@@ -20,7 +20,7 @@ class HospitalSearch extends Hospital
     {
         return [
             [['id', 'hospital_province', 'hospital_city', 'hospital_district', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
-            [['hospital_name', 'comment'], 'safe'],
+            [['hospital_name', 'comment', 'hospital_city_list'], 'safe'],
         ];
     }
 
@@ -77,9 +77,16 @@ class HospitalSearch extends Hospital
             'updated_by' => $this->updated_by,
         ]);
 
+        $cities = [];
+        if (is_array($this->hospital_city_list)) {
+            foreach ($this->hospital_city_list as $key => $value) {
+                $cities[] = $value;
+            }
+        }
+
         $query->andFilterWhere(['like', 'hospital_name', $this->hospital_name])
             ->andFilterWhere(['like', 'comment', $this->comment])
-            ->andFilterWhere(['in', 'hospital_city', $this->hospital_city_list]);
+            ->andFilterWhere(['in', 'hospital_city', $cities]);
 
         return $dataProvider;
     }

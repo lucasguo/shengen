@@ -30,10 +30,11 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'customer_company')->textInput(['maxlength' => true])->label(\backend\models\CustomerNew::getTypeCompanyLabelFromCode($model->customer_type)) ?>
 
-    <?= $form->field($model, 'customer_job')->textInput(['maxlength' => true]) ?>
+
 
     <?php if ($model->customer_type == \backend\models\CustomerNew::TYPE_PATIENT) { ?>
         <?= $form->field($extend, 'gender')->dropDownList(\backend\models\CustomerNewExtend::getGenderList()) ?>
+        <?= $form->field($extend, 'age')->textInput(['maxlength' => true]) ?>
         <?= $form->field($extend, 'diagnosis')->textInput(['maxlength' => true]) ?>
         <?= $form->field($extend, 'disease_course')->textInput(['maxlength' => true]) ?>
         <?= $form->field($extend, 'doctor_id')->widget(Select2::classname(), [
@@ -46,6 +47,8 @@ use kartik\select2\Select2;
 
         <?= $form->field($extend, 'treat_plan')->textInput(['maxlength' => true]) ?>
 
+    <?php } else { ?>
+        <?= $form->field($model, 'customer_job')->textInput(['maxlength' => true]) ?>
     <?php } ?>
 
     <?= $form->field($model, 'comment')->textarea(['rows' => 4]) ?>

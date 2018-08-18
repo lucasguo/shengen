@@ -49,7 +49,7 @@ class CustomerNewSearch extends CustomerNew
      */
     public function search($params)
     {
-        $query = CustomerNew::find()->distinct()->leftJoin(CustomerHospitalMapping::tableName(), [CustomerNew::tableName() . '.id' => CustomerHospitalMapping::tableName() . '.customer_id']);
+        $query = CustomerNew::find()->distinct()->leftJoin(CustomerHospitalMapping::tableName(), CustomerNew::tableName() . '.id = ' . CustomerHospitalMapping::tableName() . '.customer_id');
 
         // add conditions that should always apply here
 

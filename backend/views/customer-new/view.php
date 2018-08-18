@@ -29,28 +29,57 @@ $this->params['breadcrumbs'][] = $this->title;
     	<div class="box-body">
     <?= DetailView::widget([
         'model' => $model,
-        'attributes' => [
-            'customer_name',
-            'customer_mobile',
-            [
-                'attribute' => 'customer_company',
-                'label' => \backend\models\CustomerNew::getTypeCompanyLabelFromCode($model->customer_type)
-            ],
-            'customer_job',
-            [
-                'attribute' => 'hospital_id',
-                'value' => $model->getHospital(),
-                'label' => '关联医院'
-            ],
-            'comment:ntext',
-            [
-                'attribute' => 'created_at',
-                'format' => 'datetime'
-            ],
-        ],
+        'attributes' => \yii\helpers\ArrayHelper::merge(\yii\helpers\ArrayHelper::merge(
+             [
+                 'customer_name',
+                 'customer_mobile',
+                 [
+                    'attribute' => 'customer_company',
+                    'label' => \backend\models\CustomerNew::getTypeCompanyLabelFromCode($model->customer_type)
+                 ],
+             ],
+            $model->customer_type == \backend\models\CustomerNew::TYPE_PATIENT ? [] : ['customer_job']
+          ),[
+                [
+                    'attribute' => 'hospital_id',
+                    'value' => $model->customer_type == \backend\models\CustomerNew::TYPE_COMPANY ? $model->getHospitals() : $model->getHospital(),
+                    'label' => '关联医院'
+                ],
+                'comment:ntext',
+                [
+                    'attribute' => 'created_at',
+                    'format' => 'datetime'
+                ],
+            ]
+        ),
     ]) ?>
+        </div>
+    </div>
+    <?php if ($model->customer_type == \backend\models\CustomerNew::TYPE_PATIENT) { ?>
+        <h4>患者信息</h4>
+    <div class="box">
+        <div class="box-body">
+                <?= DetailView::widget([
+                    'model' => $extend,
+                    'attributes' => [
+                        [
+                            'attribute' => 'gender',
+                            'value' => \backend\models\CustomerNewExtend::getGenderList()[$extend->gender],
+                        ],
+                        'age',
+                        'diagnosis',
+                        'disease_course',
+                        'treat_plan',
+                        [
+                            'attribute' => 'doctor_id',
+                            'value' => $extend->getDoctorName(),
+                        ],
+                    ],
+                ]) ?>
+
     	</div>
     </div>
+    <?php } ?>
 
     <h4>维护记录</h4>
     <p>

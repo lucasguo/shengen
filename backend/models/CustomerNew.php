@@ -69,6 +69,7 @@ class CustomerNew extends \yii\db\ActiveRecord
             [['customer_company'], 'string', 'max' => 50],
             [['customer_job'], 'string', 'max' => 20],
             [['customer_mobile'], 'unique'],
+            ['hospital_ids', 'each', 'rule' => ['integer']],
             [['customer_type'], 'in', 'range' => [self::TYPE_HOSPITAL, self::TYPE_COMPANY, self::TYPE_PATIENT]],
         ];
     }
@@ -162,7 +163,7 @@ class CustomerNew extends \yii\db\ActiveRecord
         parent::afterSave($insert, $changedAttributes);
         CustomerHospitalMapping::deleteAll(['customer_id' => $this->id]);
         if ($this->customer_type == CustomerNew::TYPE_COMPANY && $this->hospital_ids != null) {
-            foreach ($this->hospital_ids as $id) {
+            foreach ($this->hospital_ids as $index => $id) {
                 $mapping = new CustomerHospitalMapping();
                 $mapping->customer_id = $this->id;
                 $mapping->hospital_id = $id;

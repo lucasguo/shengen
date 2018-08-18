@@ -26,6 +26,8 @@ class CustomerNewExtend extends \yii\db\ActiveRecord
 {
     const GENDER_MALE = 1;
     const GENDER_FEMALE = 2;
+
+    private $age;
 	/**
 	 * (non-PHPdoc)
 	 * @see \yii\base\Component::behaviors()
@@ -36,7 +38,19 @@ class CustomerNewExtend extends \yii\db\ActiveRecord
 			BlameableBehavior::className(),
 		];
 	}
-	
+
+	public function getAge() {
+	    if ($this->birth_year != null) {
+            return intval(date("Y")) - $this->birth_year;
+        } else {
+	        return null;
+        }
+    }
+
+    public function setAge($age) {
+	    $this->birth_year = intval(date("Y")) - $age;
+    }
+
     /**
      * @inheritdoc
      */
@@ -52,7 +66,7 @@ class CustomerNewExtend extends \yii\db\ActiveRecord
     {
         return [
             [['customer_id', 'gender'], 'required'],
-            [['customer_id', 'gender', 'birth_year', 'doctor_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['customer_id', 'gender', 'age', 'doctor_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['diagnosis', 'disease_course', 'treat_plan'], 'string', 'max' => 100],
         ];
     }
@@ -66,7 +80,7 @@ class CustomerNewExtend extends \yii\db\ActiveRecord
             'id' => 'ID',
             'customer_id' => 'Customer ID',
             'gender' => '性别',
-            'birth_year' => '年龄',
+            'age' => '年龄',
             'diagnosis' => '诊断',
             'disease_course' => '病程',
             'treat_plan' => '治疗方案',
@@ -93,5 +107,14 @@ class CustomerNewExtend extends \yii\db\ActiveRecord
             CustomerNewExtend::GENDER_MALE => '男',
             CustomerNewExtend::GENDER_FEMALE => '女'
         ];
+    }
+
+    public function getDoctorName() {
+        $doctor = CustomerNew::findOne(['id' => $this->doctor_id]);
+        if ($doctor != null) {
+            return $doctor -> customer_name;
+        } else {
+            return null;
+        }
     }
 }

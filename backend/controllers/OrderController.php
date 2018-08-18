@@ -43,26 +43,10 @@ class OrderController extends Controller
         	'access' => [
         		'class' => AccessControl::className(),
         		'rules' => [
-        			[
-        				'actions' => ['create'],
-        				'allow' => true,
-        				'roles' => ['addOrder'],
-        			],
-        			[
-	        			'actions' => ['update', 'delete', 'confirm'],
-	        			'allow' => true,
-	        			'roles' => ['updateOrder'],
-        			],
-        			[
-	        			'actions' => ['index', 'view'],
-	        			'allow' => true,
-	        			'roles' => ['addOrder', 'updateOrder'],
-        			],
-        			[
-        				'actions' => ['out-index', 'out', 'export', 'finish'],
-        				'allow' => true,
-        				'roles' => ['manageMachine'],
-        			],
+                    [
+                        'allow' => true,
+                        'roles' => ['adminSite'],
+                    ]
         		],
         	],
         ];

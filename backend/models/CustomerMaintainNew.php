@@ -12,6 +12,7 @@ use yii\behaviors\BlameableBehavior;
  * @property integer $id
  * @property string $content
  * @property integer $customer_id
+ * @property integer $alert_id
  * @property integer $created_by
  * @property integer $updated_by
  * @property integer $created_at

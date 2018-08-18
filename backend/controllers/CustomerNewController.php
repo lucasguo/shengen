@@ -38,8 +38,8 @@ class CustomerNewController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['@'],
-                    ],
+                        'roles' => ['adminSite'],
+                    ]
                 ],
             ],
         ];
@@ -73,7 +73,17 @@ class CustomerNewController extends Controller
 		', [':cid' => $id])->queryScalar();
 
         $dataProvider = new SqlDataProvider([
-            'sql' => 'SELECT c.content, c.created_at, u.username FROM customer_maintain_new c left join user u on c.created_by=u.id WHERE c.customer_id=:cid',
+            'sql' => '
+SELECT 
+CASE
+  WHEN c.alert_id is null then c.content
+  WHEN c.alert_id is not null then CONCAT(c.content, \'\n(\', a.alert_date, \' \', a.content, \')\')
+END as content, 
+c.created_at, u.username 
+FROM customer_maintain_new c 
+left join user u on c.created_by=u.id
+left join alert a on c.alert_id = a.id
+WHERE c.customer_id=:cid',
             'params' => [':cid' => $id],
             'totalCount' => $count,
             'sort' => [
@@ -186,7 +196,7 @@ class CustomerNewController extends Controller
                 $maintain = new CustomerMaintainNew();
                 $maintain->customer_id = $id;
                 $maintain->content = $model->content;
-                $maintain->save();
+
                 if($model->add_alert === '1')
                 {
                     $alert = new Alert();
@@ -201,7 +211,9 @@ class CustomerNewController extends Controller
                     $alert->alert_time = $model->alert_time;
                     $alert->userid = Yii::$app->user->id;
                     $alert->save();
+                    $maintain->alert_id = $alert->id;
                 }
+                $maintain->save();
                 return $this->redirect(['view', 'id' => $id]);
             }
         }

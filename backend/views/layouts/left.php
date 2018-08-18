@@ -22,10 +22,10 @@ use backend\models\CustomerNew;
                 'items' => [
                     ['label' => '功能菜单', 'options' => ['class' => 'header']],
 
-		            ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_COMPANY), 'icon' => 'address-book', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_COMPANY]],
-                    ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_HOSPITAL), 'icon' => 'address-book-o', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_HOSPITAL]],
-                    ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_PATIENT), 'icon' => 'blind', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_PATIENT]],
-                    ['label' => '备忘日历', 'icon' => 'calendar-check-o', 'url' => ['/customer-new/calendar']],
+		            ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_COMPANY), 'icon' => 'address-book', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_COMPANY], 'visible' => Yii::$app->user->can('adminSite')],
+                    ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_HOSPITAL), 'icon' => 'address-book-o', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_HOSPITAL], 'visible' => Yii::$app->user->can('adminSite')],
+                    ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_PATIENT), 'icon' => 'blind', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_PATIENT], 'visible' => Yii::$app->user->can('adminSite')],
+                    ['label' => '备忘日历', 'icon' => 'calendar-check-o', 'url' => ['/customer-new/calendar'], 'visible' => Yii::$app->user->can('adminSite')],
 //                	[
 //                		'label' => '客户管理',
 //                		'icon' => 'search-plus',
@@ -60,7 +60,7 @@ use backend\models\CustomerNew;
 //	                		['label' => '配件管理', 'url' => ['/part/index'], 'visible' => Yii::$app->user->can('manageMachine')],
 //	                	],
 //                	],
-//                	['label' => '订单管理', 'icon' => 'file-text', 'url' => ['/order/index'], 'visible' => (Yii::$app->user->can('addOrder') || Yii::$app->user->can('updateOrder'))],
+                	['label' => '订单管理', 'icon' => 'file-text', 'url' => ['/order/index'], 'visible' => Yii::$app->user->can('adminSite')],
 //                    ['label' => '文章管理', 'icon' => 'book', 'url' => ['/article/index'], 'visible' => (Yii::$app->user->can('maintainArticle'))],
 //                    ['label' => '用户管理', 'icon' => 'users', 'url' => ['/user/index'], 'visible' => Yii::$app->user->can('manageUser')],
 //                	[

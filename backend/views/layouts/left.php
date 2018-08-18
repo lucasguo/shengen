@@ -25,7 +25,7 @@ use backend\models\CustomerNew;
 		            ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_COMPANY), 'icon' => 'address-book', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_COMPANY], 'visible' => Yii::$app->user->can('adminSite')],
                     ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_HOSPITAL), 'icon' => 'address-book-o', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_HOSPITAL], 'visible' => Yii::$app->user->can('adminSite')],
                     ['label' => CustomerNew::getTypeLabelFromCode(CustomerNew::TYPE_PATIENT), 'icon' => 'blind', 'url' => ['/customer-new/index', 'type' => CustomerNew::TYPE_PATIENT], 'visible' => Yii::$app->user->can('adminSite')],
-                    ['label' => '备忘日历', 'icon' => 'calendar-check-o', 'url' => ['/customer-new/calendar'], 'visible' => Yii::$app->user->can('adminSite')],
+//                    ['label' => '备忘日历', 'icon' => 'calendar-check-o', 'url' => ['/customer-new/calendar'], 'visible' => Yii::$app->user->can('adminSite')],
 //                	[
 //                		'label' => '客户管理',
 //                		'icon' => 'search-plus',
@@ -83,6 +83,7 @@ use backend\models\CustomerNew;
 	                	'visible' => Yii::$app->user->can('adminSite'),
 	                	'items' => [
 	                		['label' => '产品管理', 'url' => ['/product/index'], 'visible' => Yii::$app->user->can('adminSite')],
+                            ['label' => '产品型号管理', 'url' => ['/product-model/index'], 'visible' => Yii::$app->user->can('adminSite')],
 	                		['label' => '配件类型管理', 'url' => ['/part-type/index'], 'visible' => Yii::$app->user->can('adminSite')],
 	                		['label' => '医院管理', 'url' => ['/hospital/index'], 'visible' => Yii::$app->user->can('adminSite')],
 	                	],

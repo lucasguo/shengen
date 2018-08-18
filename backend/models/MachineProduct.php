@@ -98,6 +98,12 @@ class MachineProduct extends \yii\db\ActiveRecord
     	$products = self::find()->all();
     	return ArrayHelper::map($products, 'id', 'product_name');
     }
+
+    public static function getOnSaleProductList()
+    {
+        $products = self::findAll(['product_status' => static::STATUS_ACTIVE]);
+        return ArrayHelper::map($products, 'id', 'product_name');
+    }
     
     /**
      * 

@@ -13,8 +13,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="machine-product-index">
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <p>
         <?= Html::a('添加产品', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
@@ -22,16 +20,24 @@ $this->params['breadcrumbs'][] = $this->title;
     	<div class="box-body">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        'filterModel' => null,
+        'headerRowOptions' => ['class' => 'hidden-xs'],
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'contentOptions' => ['class' => 'hidden-xs'],
+            ],
 
             // 'id',
-            'product_code',
+            [
+                'attribute' => 'product_code',
+                'contentOptions' => ['class' => 'hidden-xs'],
+            ],
             'product_name',
             [
             	'attribute' => 'product_status',
             	'value' => 'statusLabel',
+                'contentOptions' => ['class' => 'hidden-xs'],
             	'filter' => MachineProduct::getStatusList(),
             ],
             // 'created_at',
@@ -40,6 +46,14 @@ $this->params['breadcrumbs'][] = $this->title;
             [
             	'class' => 'yii\grid\ActionColumn',
             	'template' => '{view} {update}',
+                'buttons' => [
+                    'view' => function ($url, $model, $key) {
+                        return Html::a('【明细】', $url);
+                    },
+                    'update' => function ($url, $model, $key) {
+                        return Html::a('【修改】', $url);
+                    },
+                ],
    	 		],
         ],
     ]); ?>

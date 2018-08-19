@@ -1,551 +1,515 @@
--- phpMyAdmin SQL Dump
--- version 4.8.2
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: Aug 19, 2018 at 05:39 PM
--- Server version: 5.6.40
--- PHP Version: 7.2.7
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('尤溪县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第二医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第一医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁化县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泰宁县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永安市立医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第二医院东院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永安市妇幼保健院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('大田县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第五医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('尤溪县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁化县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第三医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永安市中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第六医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('沙县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市第四医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('明溪县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泰宁县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('将乐县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('沙县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('将乐县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永安铁路医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('大田县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('明溪县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('大田县妇幼保健所', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('尤溪县妇幼保健站', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建宁县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永安矿务局医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('清流县医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永安第二医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市皮肤病防治院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('清流县中医院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁化县妇幼保健所', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市职业病防治院', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('三明市妇幼保健所', 1317, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市第一医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武市立医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('光泽县医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市妇幼保健院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市第二医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('浦城县中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('顺昌县中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建瓯市中西医结合医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武市第二医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('松溪县医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建瓯市立医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平森工医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('政和县中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建阳市立医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武市妇幼保健院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('顺昌县医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建阳市第二医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('光泽县中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('光泽县妇幼保健所', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平博爱肝病医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('政和县医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('浦城县医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武市中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武铁路医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市精神收容所', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武亿力医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建瓯市皮肤病医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武市精神病防治院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市仁爱医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武市森工医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('浦城县森工医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建阳市中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市皮肤病性病防治院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('邵武煤矿医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('松溪县中医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('顺昌县建西森工医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建阳市立第二医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市职业病防治院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市延平医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('延平市医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建瓯市林业医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市兴华医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('浦城县城郊医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建瓯市精神病院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平市延平区医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建瓯市妇幼保健院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('建阳市妇幼保健院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('顺昌妇幼保健所', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('浦城县蛇伤防治院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('政和县妇幼保健站', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省荣誉军人康复医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南平博爱肝病医院', 1352, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门中山医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门大学附属中山医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市第一医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市第三医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市第二医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市中医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市第一医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市妇幼保健院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门大学医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门眼科中心医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市集美区灌口医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市第二医院鼓浪屿分院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门莲花医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门前埔医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同安区同民医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市精神卫生中心', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市开元区医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同安区中医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市第二医院海沧医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市思明区中医骨伤科医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('思明区人民医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同济医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同安区医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门第一医院杏林医学中心', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市思明区人民医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市中西医结合医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门医学高等专科学校附属第二医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门仁安医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市集美区妇幼保健站', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市开元区妇幼保健所', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门铁路医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市二轻医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门同安闽海医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市杏林区康复医疗中心', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市湖里区江头医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门仁安医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同济医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门德真会齿科中心', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市交通医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同安区大嶝医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门海沧新阳医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市同安区妇幼保健院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门医学高等专科学校附属口腔医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门医学高等专科学校附属口腔医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市思明区妇产医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市鹭海医院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市结核病防治所', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('厦门市中山医院金榜分院', 1315, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市闽东医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市第二医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市人民医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市妇幼保健院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('屏南县医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('霞浦县医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('寿宁县妇幼保健所', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福安市医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('寿宁县医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('古田县医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('柘荣县医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福安市中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('柘荣县中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市妇幼保健院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市精神病院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('霞浦县妇幼保健院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市妇幼保健所', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市海军医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市精神病院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('周宁县医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福安市精神病收容所', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('寿宁县中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福安市民族医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('周宁县中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('屏南县中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('宁德市精神病院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('古田县中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福安市精神病院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('古田县妇幼保健院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福安市妇幼保健院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('周宁县妇幼保健院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('霞浦县中医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福鼎市康和产科医院', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('屏南县妇幼保健站', 1370, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市第一医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建医科大学附属第二医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('德化县医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('石狮市华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安市中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安市医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市正骨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市第三医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市儿童医院泉州市妇幼保健院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('中国人民解放军第一八Ｏ医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市成功医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市成功医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市人民医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州万祥微创医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市温陵医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市明新医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市妇幼保健院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安市妇幼保健院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市安海医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('石狮市振狮医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永春县医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市南威医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('安溪县医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('安溪县中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市中医外科医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安市海都医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('德化县中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建中医学院附属泉州中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安市国专医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县皮肤医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市永和英墩医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('安溪县中医院安溪县第三医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市泉港医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市精神病医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州皮肤病防治院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州中山医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江东方医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市爱民医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永春县中医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安市南侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('安溪县官桥医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县精神病收容所', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县惠北华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市丰泽区医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县惠东华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('石狮市妇幼保健院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省天湖山矿区医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州同仁医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市丰泽区红十字医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市东南医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安惠兴医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('明新华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安妇幼保健所', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市红十字会', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市残疾人康复中心', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市妇幼保健所', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州同仁医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州协和医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市英墩华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江水仙医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市东南医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('石狮市赛特医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('石狮市赛特医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州博海医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县惠南华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永春县妇幼保健所', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永春县精神病防治院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('德化县精神病医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('惠安县洛江华侨医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('德化县妇幼保健所', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南安盐场医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市饯坡医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市光明医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('晋江市华山医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州市肺结核病防治所', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州五官科医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('泉州成耳鼻咽喉科医院', 1332, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙海市第一医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市芗城区妇幼保健院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳浦县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州博爱医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市博爱医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市福康医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('华安县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('平和县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('云霄县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳浦县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('诏安县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('东山县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙海市第二医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙海市中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('云霄县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市芗城区中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('东山县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('华安县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长泰县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市皮肤病防治院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长泰县第二医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳浦县妇幼保健院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('诏安县第二医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('平和县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市芗城区医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市精神病收容所', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('云霄县妇幼保健所', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南靖县人民医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('诏安县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳浦县佛潭华侨医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南靖县中医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长泰县医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙海市玉珠脑病医疗研究所', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳浦县第二医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('东山县第二医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('南靖县妇幼保健院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市妇幼保健所', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州九龙医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市金峰医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('诏安县妇幼保健院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙海市妇幼保健所', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('华安县妇幼保健所', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('云霄县妇幼保健院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市职工康复医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳州市华侨医院', 1341, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('中国人民解放军南京军区福州总医院(东方医院)', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建医科大学附属协和医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省肿瘤医院(福建省肿瘤研究所)', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省妇幼保健院(福建省妇儿医院)', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第二医院(福建省福州中西医结合医院)', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建中医学院附属第二人民医院(福建省第二人民医院)', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第一医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州中西结合医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长乐市医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第二医院二部', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省中医学院附属第二人民医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('平潭县医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建中医学院附属人民医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市传染病医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建中医学院附属省第二人民医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市儿童医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州鼓楼医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省地质医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州第六医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第二医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省级机关医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第六医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第七医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省人民医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('连江县医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市融强医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州台江医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省煤矿中心医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市融强医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市晋安区医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州神经精神病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('平潭县中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省皮肤病性病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第四医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州肺科医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省师范大学医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市阳光医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建医科大学附属口腔医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第一医院福州红十字医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州铁路中心医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第八医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽清县医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第三医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州二化医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('连江县中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长乐市第二医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长乐市妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长乐市中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓楼医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('罗源县中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('罗源县医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建东南眼科医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市职业病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州福兴医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓楼区中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永泰县医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永泰县中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市建新医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市仓山区中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州和平医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽清县中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市卢镜明中医眼科医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('罗源县妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('连江县妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市第五医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市城南医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓楼康复医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市按摩医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建蜂疗医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州东南眼科医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市郊区医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州屏西医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市32822部队医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市皮肤病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽清县精神病院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长乐金峰福康医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州铁路分局福州铁路中心医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建六建集团职工医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市台江区妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州盘屿骨伤医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽侯县祥谦医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓楼区妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省关怀医院福建省职业病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市台江上海新村医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州吴熙妇科中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州温泉康复医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市第二医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市高山医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省第六建筑工程公司职工医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建医科大学校医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽清县六都医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽侯县精神病院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽清县白中中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市东张医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州水部医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市马江医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓楼精神病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市马尾区医院福州马江医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓楼区民凤门诊', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省结核病防治所', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市台江区医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州华安医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市华大医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市中医谢可珊痔瘘专科医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市公共交通总公司职工医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建省老年医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市林如高正骨医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市仓山区妇幼保健站', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福建麦格眼科医疗中心', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市二化集团有限公司职工医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福清市红十字医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永泰县妇幼保健所', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长乐市精神病医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽侯县医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('平潭县妇幼保健所', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('闽清县皮肤病防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永泰县嵩口医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市伟达中医肿瘤医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州吴熙妇科中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州道济中风防治院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州同德医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市鼓山中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市晋安区妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市肖治安中医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州妇幼保健院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('福州市西湖健民医院', 1303, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('仙游县医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田学院附属医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市第一医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田学院附属医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市秀屿医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田华侨医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市荔城区医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市民族医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田县平民医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('仙游县中医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市涵江区中医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市城厢区中医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市涵江医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市肿瘤医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市荔城区平民医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田县中医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市皮肤病防治院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田县北岸医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('仙游县妇幼保健院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('仙游县中医院仙游县红十字医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田县精神病防治院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市民族医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市肿瘤防治院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('武警八七一Ｏ部队医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市荔城区精神病防治院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田县盐场职工医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市荔城区盐场职工医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('仙游县皮肤病防治院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市中医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田口腔专科医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田口腔专科医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市涵江精神病医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田华亭华侨医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田湄洲湾北岸医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('莆田市涵江骨科医院', 1329, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市第一医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩人民医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市第三医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩女子医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市新罗区妇幼保健院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('上杭县中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('上杭县医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市新罗区皮肤病防治院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩博爱医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市第二医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('武平县医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市人民医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳平市医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳平市中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长汀县中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('武平县中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永定县医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市一七五分院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长汀县汀洲医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩阳光医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长汀县城关医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('连城县医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永定县下洋华侨医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('连城县中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永定县中医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('武平县地区皮肤病防治院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('武平县妇幼保健所', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('武平县城关医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永定县坎市医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩市职业病防治院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永定县矿务局医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('连城县第二医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('龙岩矿务局医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('漳平市妇幼保健院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长汀县妇幼保健院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('长汀县皮肤病防治院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('永定县城郊医院', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('上杭县妇幼保健所', 1362, 1534697590, 1, 1534697590, 1);
+INSERT INTO `hospital` (`hospital_name`, `hospital_city`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES ('上杭县皮肤病防治院', 1362, 1534697590, 1, 1534697590, 1);
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `testdb`
---
-
---
--- Dumping data for table `hospital`
---
-
-INSERT INTO `hospital` (`hospital_name`, `city_id`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
-('尤溪县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第二医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第一医院', '三明市', 1534697590, 1, 1534697590, 1),
-('宁化县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('泰宁县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('永安市立医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第二医院东院', '三明市', 1534697590, 1, 1534697590, 1),
-('永安市妇幼保健院', '三明市', 1534697590, 1, 1534697590, 1),
-('大田县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第五医院', '三明市', 1534697590, 1, 1534697590, 1),
-('尤溪县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('宁化县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第三医院', '三明市', 1534697590, 1, 1534697590, 1),
-('永安市中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第六医院', '三明市', 1534697590, 1, 1534697590, 1),
-('沙县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市第四医院', '三明市', 1534697590, 1, 1534697590, 1),
-('明溪县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('泰宁县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('将乐县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('沙县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('将乐县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('永安铁路医院', '三明市', 1534697590, 1, 1534697590, 1),
-('大田县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('明溪县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('大田县妇幼保健所', '三明市', 1534697590, 1, 1534697590, 1),
-('尤溪县妇幼保健站', '三明市', 1534697590, 1, 1534697590, 1),
-('建宁县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('永安矿务局医院', '三明市', 1534697590, 1, 1534697590, 1),
-('清流县医院', '三明市', 1534697590, 1, 1534697590, 1),
-('永安第二医院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市皮肤病防治院', '三明市', 1534697590, 1, 1534697590, 1),
-('清流县中医院', '三明市', 1534697590, 1, 1534697590, 1),
-('宁化县妇幼保健所', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市职业病防治院', '三明市', 1534697590, 1, 1534697590, 1),
-('三明市妇幼保健所', '三明市', 1534697590, 1, 1534697590, 1),
-('南平市第一医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武市立医院', '南平市', 1534697590, 1, 1534697590, 1),
-('光泽县医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市妇幼保健院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市第二医院', '南平市', 1534697590, 1, 1534697590, 1),
-('浦城县中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('顺昌县中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建瓯市中西医结合医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武市第二医院', '南平市', 1534697590, 1, 1534697590, 1),
-('松溪县医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建瓯市立医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平森工医院', '南平市', 1534697590, 1, 1534697590, 1),
-('政和县中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建阳市立医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武市妇幼保健院', '南平市', 1534697590, 1, 1534697590, 1),
-('顺昌县医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建阳市第二医院', '南平市', 1534697590, 1, 1534697590, 1),
-('光泽县中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('光泽县妇幼保健所', '南平市', 1534697590, 1, 1534697590, 1),
-('南平博爱肝病医院', '南平市', 1534697590, 1, 1534697590, 1),
-('政和县医院', '南平市', 1534697590, 1, 1534697590, 1),
-('浦城县医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武市中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武铁路医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市精神收容所', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武亿力医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建瓯市皮肤病医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武市精神病防治院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市仁爱医院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武市森工医院', '南平市', 1534697590, 1, 1534697590, 1),
-('浦城县森工医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建阳市中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市皮肤病性病防治院', '南平市', 1534697590, 1, 1534697590, 1),
-('邵武煤矿医院', '南平市', 1534697590, 1, 1534697590, 1),
-('松溪县中医院', '南平市', 1534697590, 1, 1534697590, 1),
-('顺昌县建西森工医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建阳市立第二医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市职业病防治院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市延平医院', '南平市', 1534697590, 1, 1534697590, 1),
-('延平市医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建瓯市林业医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市兴华医院', '南平市', 1534697590, 1, 1534697590, 1),
-('浦城县城郊医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建瓯市精神病院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平市延平区医院', '南平市', 1534697590, 1, 1534697590, 1),
-('建瓯市妇幼保健院', '南平市', 1534697590, 1, 1534697590, 1),
-('建阳市妇幼保健院', '南平市', 1534697590, 1, 1534697590, 1),
-('顺昌妇幼保健所', '南平市', 1534697590, 1, 1534697590, 1),
-('浦城县蛇伤防治院', '南平市', 1534697590, 1, 1534697590, 1),
-('政和县妇幼保健站', '南平市', 1534697590, 1, 1534697590, 1),
-('福建省荣誉军人康复医院', '南平市', 1534697590, 1, 1534697590, 1),
-('南平博爱肝病医院', '南平市', 1534697590, 1, 1534697590, 1),
-('厦门中山医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门大学附属中山医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市第一医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市第三医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市第二医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市中医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市第一医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市妇幼保健院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门大学医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门眼科中心医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市集美区灌口医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市第二医院鼓浪屿分院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门莲花医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门前埔医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同安区同民医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市精神卫生中心', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市开元区医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同安区中医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市第二医院海沧医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市思明区中医骨伤科医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('思明区人民医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同济医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同安区医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门第一医院杏林医学中心', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市思明区人民医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市中西医结合医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门医学高等专科学校附属第二医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门仁安医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市集美区妇幼保健站', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市开元区妇幼保健所', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门铁路医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市二轻医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门同安闽海医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市杏林区康复医疗中心', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市湖里区江头医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门仁安医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同济医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门德真会齿科中心', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市交通医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同安区大嶝医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门海沧新阳医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市同安区妇幼保健院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门医学高等专科学校附属口腔医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门医学高等专科学校附属口腔医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市思明区妇产医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市鹭海医院', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市结核病防治所', '厦门市', 1534697590, 1, 1534697590, 1),
-('厦门市中山医院金榜分院', '厦门市', 1534697590, 1, 1534697590, 1),
-('福鼎市医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市闽东医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市第二医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市人民医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市妇幼保健院', '宁德市', 1534697590, 1, 1534697590, 1),
-('屏南县医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('霞浦县医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('寿宁县妇幼保健所', '宁德市', 1534697590, 1, 1534697590, 1),
-('福安市医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('寿宁县医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('古田县医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('柘荣县医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福安市中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('柘荣县中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市妇幼保健院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市精神病院', '宁德市', 1534697590, 1, 1534697590, 1),
-('霞浦县妇幼保健院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市妇幼保健所', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市海军医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市精神病院', '宁德市', 1534697590, 1, 1534697590, 1),
-('周宁县医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福安市精神病收容所', '宁德市', 1534697590, 1, 1534697590, 1),
-('寿宁县中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福安市民族医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('周宁县中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('屏南县中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('宁德市精神病院', '宁德市', 1534697590, 1, 1534697590, 1),
-('古田县中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福安市精神病院', '宁德市', 1534697590, 1, 1534697590, 1),
-('古田县妇幼保健院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福安市妇幼保健院', '宁德市', 1534697590, 1, 1534697590, 1),
-('周宁县妇幼保健院', '宁德市', 1534697590, 1, 1534697590, 1),
-('霞浦县中医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('福鼎市康和产科医院', '宁德市', 1534697590, 1, 1534697590, 1),
-('屏南县妇幼保健站', '宁德市', 1534697590, 1, 1534697590, 1),
-('泉州市第一医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('福建医科大学附属第二医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('德化县医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('石狮市华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安市中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安市医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市正骨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市第三医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市儿童医院泉州市妇幼保健院', '泉州市', 1534697590, 1, 1534697590, 1),
-('中国人民解放军第一八Ｏ医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市成功医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市成功医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市人民医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州万祥微创医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市温陵医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市明新医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市妇幼保健院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安市妇幼保健院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市安海医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('石狮市振狮医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('永春县医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市南威医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('安溪县医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('安溪县中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市中医外科医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安市海都医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('德化县中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('福建中医学院附属泉州中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安市国专医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县皮肤医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市永和英墩医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('安溪县中医院安溪县第三医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市泉港医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市精神病医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州皮肤病防治院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州中山医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江东方医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市爱民医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('永春县中医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安市南侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('安溪县官桥医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县精神病收容所', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县惠北华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市丰泽区医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县惠东华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('石狮市妇幼保健院', '泉州市', 1534697590, 1, 1534697590, 1),
-('福建省天湖山矿区医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州同仁医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市丰泽区红十字医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市东南医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安惠兴医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('明新华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安妇幼保健所', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市红十字会', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市残疾人康复中心', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市妇幼保健所', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州同仁医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州协和医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市英墩华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江水仙医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市东南医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('石狮市赛特医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('石狮市赛特医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州博海医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县惠南华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('永春县妇幼保健所', '泉州市', 1534697590, 1, 1534697590, 1),
-('永春县精神病防治院', '泉州市', 1534697590, 1, 1534697590, 1),
-('德化县精神病医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('惠安县洛江华侨医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('德化县妇幼保健所', '泉州市', 1534697590, 1, 1534697590, 1),
-('南安盐场医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市饯坡医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市光明医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('晋江市华山医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州市肺结核病防治所', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州五官科医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('泉州成耳鼻咽喉科医院', '泉州市', 1534697590, 1, 1534697590, 1),
-('漳州市医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('龙海市第一医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市芗城区妇幼保健院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳浦县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州博爱医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市博爱医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市福康医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('华安县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('平和县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('云霄县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳浦县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('诏安县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('东山县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('龙海市第二医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('龙海市中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('云霄县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市芗城区中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('东山县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('华安县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('长泰县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市皮肤病防治院', '漳州市', 1534697590, 1, 1534697590, 1),
-('长泰县第二医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳浦县妇幼保健院', '漳州市', 1534697590, 1, 1534697590, 1),
-('诏安县第二医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('平和县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市芗城区医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市精神病收容所', '漳州市', 1534697590, 1, 1534697590, 1),
-('云霄县妇幼保健所', '漳州市', 1534697590, 1, 1534697590, 1),
-('南靖县人民医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('诏安县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳浦县佛潭华侨医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('南靖县中医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('长泰县医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('龙海市玉珠脑病医疗研究所', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳浦县第二医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('东山县第二医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('南靖县妇幼保健院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市妇幼保健所', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州九龙医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市金峰医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('诏安县妇幼保健院', '漳州市', 1534697590, 1, 1534697590, 1),
-('龙海市妇幼保健所', '漳州市', 1534697590, 1, 1534697590, 1),
-('华安县妇幼保健所', '漳州市', 1534697590, 1, 1534697590, 1),
-('云霄县妇幼保健院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市职工康复医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('漳州市华侨医院', '漳州市', 1534697590, 1, 1534697590, 1),
-('中国人民解放军南京军区福州总医院(东方医院)', '福州市', 1534697590, 1, 1534697590, 1),
-('福建医科大学附属协和医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省立医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省肿瘤医院(福建省肿瘤研究所)', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省妇幼保健院(福建省妇儿医院)', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省立医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建医科大学附属第一医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第二医院(福建省福州中西医结合医院)', '福州市', 1534697590, 1, 1534697590, 1),
-('福建中医学院附属第二人民医院(福建省第二人民医院)', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第一医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州中西结合医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清医院', '福州市', 1534697590, 1, 1534697590, 1),
-('长乐市医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第二医院二部', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省中医学院附属第二人民医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('平潭县医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建中医学院附属人民医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市传染病医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建中医学院附属省第二人民医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市儿童医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州鼓楼医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省地质医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州第六医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第二医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省级机关医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第六医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第七医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省人民医院', '福州市', 1534697590, 1, 1534697590, 1),
-('连江县医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市融强医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州台江医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省煤矿中心医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市融强医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市晋安区医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州神经精神病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('平潭县中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省皮肤病性病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第四医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州肺科医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省师范大学医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市阳光医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建医科大学附属口腔医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第一医院福州红十字医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州铁路中心医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第八医院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽清县医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第三医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州二化医院', '福州市', 1534697590, 1, 1534697590, 1),
-('连江县中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('长乐市第二医院', '福州市', 1534697590, 1, 1534697590, 1),
-('长乐市妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('长乐市中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓楼医院', '福州市', 1534697590, 1, 1534697590, 1),
-('罗源县中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('罗源县医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建东南眼科医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市职业病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州福兴医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓楼区中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('永泰县医院', '福州市', 1534697590, 1, 1534697590, 1),
-('永泰县中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市建新医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市仓山区中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州和平医院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽清县中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市卢镜明中医眼科医院', '福州市', 1534697590, 1, 1534697590, 1),
-('罗源县妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('连江县妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市第五医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市城南医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓楼康复医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市按摩医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建蜂疗医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州东南眼科医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市郊区医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州屏西医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市32822部队医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市皮肤病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽清县精神病院', '福州市', 1534697590, 1, 1534697590, 1),
-('长乐金峰福康医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州铁路分局福州铁路中心医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建六建集团职工医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市台江区妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州盘屿骨伤医院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽侯县祥谦医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓楼区妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省关怀医院福建省职业病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市台江上海新村医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州吴熙妇科中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州温泉康复医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市第二医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市高山医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省第六建筑工程公司职工医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建医科大学校医院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽清县六都医院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽侯县精神病院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽清县白中中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市东张医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州水部医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市马江医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓楼精神病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市马尾区医院福州马江医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓楼区民凤门诊', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省结核病防治所', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市台江区医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州华安医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市华大医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市中医谢可珊痔瘘专科医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市公共交通总公司职工医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福建省老年医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市林如高正骨医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市仓山区妇幼保健站', '福州市', 1534697590, 1, 1534697590, 1),
-('福建麦格眼科医疗中心', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市二化集团有限公司职工医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福清市红十字医院', '福州市', 1534697590, 1, 1534697590, 1),
-('永泰县妇幼保健所', '福州市', 1534697590, 1, 1534697590, 1),
-('长乐市精神病医院', '福州市', 1534697590, 1, 1534697590, 1),
-('闽侯县医院', '福州市', 1534697590, 1, 1534697590, 1),
-('平潭县妇幼保健所', '福州市', 1534697590, 1, 1534697590, 1),
-('闽清县皮肤病防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('永泰县嵩口医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市伟达中医肿瘤医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州吴熙妇科中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州道济中风防治院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州同德医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市鼓山中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市晋安区妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市肖治安中医院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州妇幼保健院', '福州市', 1534697590, 1, 1534697590, 1),
-('福州市西湖健民医院', '福州市', 1534697590, 1, 1534697590, 1),
-('仙游县医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田学院附属医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市第一医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田学院附属医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市秀屿医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田华侨医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市荔城区医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市民族医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田县平民医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('仙游县中医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市涵江区中医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市城厢区中医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市涵江医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市肿瘤医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市荔城区平民医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田县中医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市皮肤病防治院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田县北岸医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('仙游县妇幼保健院', '莆田市', 1534697590, 1, 1534697590, 1),
-('仙游县中医院仙游县红十字医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田县精神病防治院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市民族医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市肿瘤防治院', '莆田市', 1534697590, 1, 1534697590, 1),
-('武警八七一Ｏ部队医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市荔城区精神病防治院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田县盐场职工医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市荔城区盐场职工医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('仙游县皮肤病防治院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市中医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田口腔专科医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田口腔专科医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市涵江精神病医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田华亭华侨医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田湄洲湾北岸医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('莆田市涵江骨科医院', '莆田市', 1534697590, 1, 1534697590, 1),
-('龙岩市第一医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩人民医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市第三医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩女子医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市新罗区妇幼保健院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('上杭县中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('上杭县医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市新罗区皮肤病防治院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩博爱医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市第二医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('武平县医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市人民医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('漳平市医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('漳平市中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('长汀县中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('武平县中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('永定县医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市一七五分院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('长汀县汀洲医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩阳光医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('长汀县城关医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('连城县医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('永定县下洋华侨医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('连城县中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('永定县中医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('武平县地区皮肤病防治院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('武平县妇幼保健所', '龙岩市', 1534697590, 1, 1534697590, 1),
-('武平县城关医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('永定县坎市医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩市职业病防治院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('永定县矿务局医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('连城县第二医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('龙岩矿务局医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('漳平市妇幼保健院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('长汀县妇幼保健院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('长汀县皮肤病防治院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('永定县城郊医院', '龙岩市', 1534697590, 1, 1534697590, 1),
-('上杭县妇幼保健所', '龙岩市', 1534697590, 1, 1534697590, 1),
-('上杭县皮肤病防治院', '龙岩市', 1534697590, 1, 1534697590, 1);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

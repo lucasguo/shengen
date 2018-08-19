@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <p>
+        <?= "<?= " ?>Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('更新') ?>, ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']) ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('删除') ?>, ['delete', <?= $urlParams ?>], [
             'class' => 'btn btn-danger',

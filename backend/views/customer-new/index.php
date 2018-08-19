@@ -34,6 +34,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'customer_name',
             [
+                'attribute' => 'hospital_id',
+                'contentOptions' => ['class' => 'hidden-xs'],
+                'value' => 'hospital',
+            ],
+            [
                 'attribute' => 'customer_company',
                 'label' =>  CustomerNew::getTypeCompanyLabelFromCode($type),
                 'contentOptions' => ['class' => 'hidden-xs'],

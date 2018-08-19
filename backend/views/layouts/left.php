@@ -60,7 +60,7 @@ use backend\models\CustomerNew;
 //	                		['label' => '配件管理', 'url' => ['/part/index'], 'visible' => Yii::$app->user->can('manageMachine')],
 //	                	],
 //                	],
-                	['label' => '订单管理', 'icon' => 'file-text', 'url' => ['/order/index'], 'visible' => Yii::$app->user->can('adminSite')],
+                	['label' => '备案单管理', 'icon' => 'file-text', 'url' => ['/order-new/index'], 'visible' => Yii::$app->user->can('adminSite')],
 //                    ['label' => '文章管理', 'icon' => 'book', 'url' => ['/article/index'], 'visible' => (Yii::$app->user->can('maintainArticle'))],
 //                    ['label' => '用户管理', 'icon' => 'users', 'url' => ['/user/index'], 'visible' => Yii::$app->user->can('manageUser')],
 //                	[

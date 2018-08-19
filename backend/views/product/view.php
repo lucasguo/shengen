@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <p>
+        <?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
         <?= Html::a('修改', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
     </p>
 

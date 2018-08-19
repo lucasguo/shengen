@@ -74,19 +74,12 @@ class CustomerNewSearch extends CustomerNew
             'customer_type' => $this->customer_type,
         ]);
 
-        $hospitals = [];
-        if (is_array($this->hospital_list)) {
-            foreach ($this->hospital_list as $key => $value) {
-                $hospitals[] = $value;
-            }
-        }
-
         $query->andFilterWhere(['like', 'customer_name', $this->customer_name])
             ->andFilterWhere(['like', 'customer_mobile', $this->customer_mobile])
             ->andFilterWhere(['like', 'customer_company', $this->customer_company])
             ->andFilterWhere(['like', 'customer_job', $this->customer_job])
             ->andFilterWhere(['like', 'comment', $this->comment])
-            ->andFilterWhere(['in', 'hospital_id', $hospitals]);
+            ->andFilterWhere(['in', 'hospital_id', $this->hospital_list]);
 
         return $dataProvider;
     }

@@ -5,6 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "product_model".
@@ -69,5 +70,25 @@ class ProductModel extends \yii\db\ActiveRecord
 
     public function getProduct() {
         return $this->hasOne(MachineProduct::class, ['id' => 'product_id']);
+    }
+
+    public static function getFullProductModelName($id) {
+        $result = static::findBySql('
+        SELECT CONCAT(p.product_name, \' - \', m.model_name) as model_name
+        FROM product_model m 
+        LEFT JOIN machine_product p ON p.id = m.product_id
+        WHERE p.id = :id
+        ', [':id' => $id])->one();
+        return $result->model_name;
+    }
+
+    public static function getAllProductModels() {
+        $result = static::findBySql('
+        SELECT m.id, CONCAT(p.product_name, \' - \', m.model_name) as model_name
+        FROM product_model m 
+        LEFT JOIN machine_product p ON p.id = m.product_id
+        WHERE p.product_status = :status
+        ', [':status' => MachineProduct::STATUS_ACTIVE])->all();
+        return ArrayHelper::map($result, 'id', 'model_name');
     }
 }

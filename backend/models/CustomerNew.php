@@ -213,4 +213,10 @@ class CustomerNew extends \yii\db\ActiveRecord
         $result = static::find()->where(['customer_type'=> CustomerNew::TYPE_HOSPITAL])->asArray()->all();
         return ArrayHelper::map($result, 'id', 'customer_name');
     }
+
+    public static function getAllCustomers()
+    {
+        $result = static::find()->asArray()->all();
+        return ArrayHelper::map($result, 'id', 'customer_name');
+    }
 }

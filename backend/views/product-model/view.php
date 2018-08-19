@@ -14,14 +14,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <p>
+        <?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
         <?= Html::a('更新', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('删除', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => '确定删除该项？',
-                'method' => 'post',
-            ],
-        ]) ?>
     </p>
     <div class="box">
     	<div class="box-body">

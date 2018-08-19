@@ -5,23 +5,34 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Hospital;
+use backend\models\OrderNew;
+use yii\db\Expression;
 
 /**
- * HospitalSearch represents the model behind the search form about `backend\models\Hospital`.
+ * OrderNewSearch represents the model behind the search form about `backend\models\OrderNew`.
  */
-class HospitalSearch extends Hospital
+class OrderNewSearch extends OrderNew
 {
-    public $hospital_city_list;
+    public $model_list;
+    public $customer_list;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id', 'hospital_province', 'hospital_city', 'hospital_district', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
-            [['hospital_name', 'comment', 'hospital_city_list'], 'safe'],
+            [['id', 'model_id', 'sell_count', 'customer_id', 'order_status', 'org_order_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['sell_amount'], 'number'],
+            [['customer_list', 'model_list'], 'safe'],
         ];
+    }
+
+    public function attributeLabels()
+    {
+        $labels =  parent::attributeLabels();
+        $labels['model_list'] = '产品型号';
+        $labels['customer_list'] = '客户';
+        return $labels;
     }
 
     /**
@@ -33,13 +44,6 @@ class HospitalSearch extends Hospital
         return Model::scenarios();
     }
 
-    public function attributeLabels()
-    {
-        $labels = parent::attributeLabels();
-        $labels['hospital_city_list'] = '医院所在城市';
-        return $labels;
-    }
-
     /**
      * Creates data provider instance with search query applied
      *
@@ -49,7 +53,8 @@ class HospitalSearch extends Hospital
      */
     public function search($params)
     {
-        $query = Hospital::find();
+        $subQuery = OrderNew::find()->select('org_order_id')->andWhere(['is not', 'org_order_id', null]);
+        $query = OrderNew::find()->where(['not in', 'id', $subQuery]);
 
         // add conditions that should always apply here
 
@@ -68,18 +73,20 @@ class HospitalSearch extends Hospital
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'hospital_province' => $this->hospital_province,
-            'hospital_city' => $this->hospital_city,
-            'hospital_district' => $this->hospital_district,
+            'model_id' => $this->model_id,
+            'sell_count' => $this->sell_count,
+            'customer_id' => $this->customer_id,
+            'order_status' => $this->order_status,
+            'org_order_id' => $this->org_order_id,
+            'sell_amount' => $this->sell_amount,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'created_by' => $this->created_by,
             'updated_by' => $this->updated_by,
         ]);
 
-        $query->andFilterWhere(['like', 'hospital_name', $this->hospital_name])
-            ->andFilterWhere(['like', 'comment', $this->comment])
-            ->andFilterWhere(['in', 'hospital_city', $this->hospital_city_list]);
+        $query->andFilterWhere(['in', 'model_id', $this->model_list])
+            ->andFilterWhere(['in', 'customer_id', $this->customer_list]);
 
         return $dataProvider;
     }

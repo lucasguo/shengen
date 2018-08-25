@@ -14,6 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="machine-product-index">
 
     <p>
+        <?= Html::a('返回', ['/site/index'], ['class' => 'btn btn-default']) ?>
         <?= Html::a('添加产品', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <div class="box">

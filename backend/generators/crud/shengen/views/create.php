@@ -20,6 +20,9 @@ $this->params['breadcrumbs'][] = ['label' => <?= $generator->generateString(Infl
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-create">
+    <p>
+        <?= "<?= " ?>Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
+    </p>
     <div class="box">
     	<div class="box-body">
     <?= "<?= " ?>$this->render('_form', [

@@ -12,10 +12,14 @@ use yii\behaviors\BlameableBehavior;
  * @property integer $id
  * @property integer $model_id
  * @property integer $sell_count
- * @property integer $customer_id
  * @property integer $order_status
  * @property integer $org_order_id
  * @property string $sell_amount
+ * @property integer $counterman_id
+ * @property integer $dealer_id
+ * @property integer $hospital_id
+ * @property integer $order_date
+ * @property string $office
  * @property integer $created_at
  * @property integer $updated_at
  * @property integer $created_by
@@ -35,7 +39,21 @@ class OrderNew extends \yii\db\ActiveRecord
 			BlameableBehavior::className(),
 		];
 	}
-	
+
+    public function getOrderDate()
+    {
+        if(!empty($this->order_date)) {
+            return date("Y-m-d", $this->order_date);
+        } else {
+            return date("Y-m-d");
+        }
+    }
+
+    public function setOrderDate($time)
+    {
+        $this->order_date = strtotime($time);
+    }
+
     /**
      * @inheritdoc
      */
@@ -47,8 +65,8 @@ class OrderNew extends \yii\db\ActiveRecord
     public function scenarios()
     {
         return [
-            'default' => ['model_id', 'customer_id', 'sell_count', 'sell_amount'],
-            'deal' => ['model_id', 'customer_id', 'sell_count', 'sell_amount'],
+            'default' => ['model_id', 'sell_count', 'sell_amount', 'counterman_id', 'dealer_id', 'hospital_id', 'order_date', 'office', 'orderDate'],
+            'deal' => ['model_id', 'sell_count', 'sell_amount', 'counterman_id', 'dealer_id', 'hospital_id', 'order_date', 'office', 'orderDate'],
         ];
     }
 
@@ -58,10 +76,11 @@ class OrderNew extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['model_id', 'customer_id'], 'required', 'on' => ['default', 'deal']],
+            [['model_id', 'hospital_id', 'dealer_id'], 'required', 'on' => ['default', 'deal']],
             [['sell_amount'], 'required', 'on' => ['deal']],
-            [['model_id', 'sell_count', 'customer_id', 'order_status', 'org_order_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer', 'on' => ['default', 'deal']],
+            [['model_id', 'sell_count', 'order_status', 'org_order_id', 'created_at', 'updated_at', 'created_by', 'updated_by', 'counterman_id', 'dealer_id', 'hospital_id', 'order_date'], 'integer', 'on' => ['default', 'deal']],
             [['sell_amount'], 'number', 'on' => ['default', 'deal']],
+            [['office', 'orderDate'], 'string', 'on' => ['default', 'deal']],
         ];
     }
 
@@ -74,7 +93,6 @@ class OrderNew extends \yii\db\ActiveRecord
             'id' => 'ID',
             'model_id' => '产品型号',
             'sell_count' => '台数',
-            'customer_id' => '客户',
             'order_status' => '状态',
             'org_order_id' => '原始订单',
             'sell_amount' => '成交总价',
@@ -82,6 +100,12 @@ class OrderNew extends \yii\db\ActiveRecord
             'updated_at' => '更新于',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
+            'counterman_id' => '业务员',
+            'dealer_id' => '报单人',
+            'hospital_id' => '报单医院',
+            'order_date' => '报单日期',
+            'office' => '报单科室',
+            'orderDate' => '报单日期',
         ];
     }
 
@@ -104,15 +128,32 @@ class OrderNew extends \yii\db\ActiveRecord
     	return self::getStatusList()[$this->order_status];
     }
 
-    public function getCustomer() {
-        return $this->hasOne(CustomerNew::class, ['id' => 'customer_id']);
+    public function getHospital()
+    {
+        return $this->hasOne(Hospital::class, ['id' => 'hospital_id']);
     }
 
+    public function getCounterman()
+    {
+        return $this->hasOne(Counterman::class, ['id' => 'counterman_id']);
+    }
+
+    public function getDealer()
+    {
+        return $this->hasOne(CustomerNew::class, ['id' => 'dealer_id']);
+    }
+
+    /**
+     * @param $orgOrder OrderNew
+     */
     public function copyFromOrg($orgOrder) {
-        $this->customer_id = $orgOrder->customer_id;
         $this->model_id = $orgOrder->model_id;
-        $this->customer_id = $orgOrder->customer_id;
         $this->sell_count = $orgOrder->sell_count;
         $this->org_order_id = $orgOrder->id;
+        $this->dealer_id = $orgOrder->dealer_id;
+        $this->hospital_id = $orgOrder->hospital_id;
+        $this->counterman_id = $orgOrder->counterman_id;
+        $this->order_date = $orgOrder->order_date;
+        $this->office = $orgOrder->office;
     }
 }

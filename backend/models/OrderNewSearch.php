@@ -14,16 +14,16 @@ use yii\db\Expression;
 class OrderNewSearch extends OrderNew
 {
     public $model_list;
-    public $customer_list;
+    public $hospital_list;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id', 'model_id', 'sell_count', 'customer_id', 'order_status', 'org_order_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['id', 'model_id', 'sell_count', 'order_status', 'org_order_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['sell_amount'], 'number'],
-            [['customer_list', 'model_list'], 'safe'],
+            [['hospital_list', 'model_list'], 'safe'],
         ];
     }
 
@@ -31,7 +31,7 @@ class OrderNewSearch extends OrderNew
     {
         $labels =  parent::attributeLabels();
         $labels['model_list'] = '产品型号';
-        $labels['customer_list'] = '客户';
+        $labels['hospital_list'] = '医院';
         return $labels;
     }
 
@@ -75,7 +75,6 @@ class OrderNewSearch extends OrderNew
             'id' => $this->id,
             'model_id' => $this->model_id,
             'sell_count' => $this->sell_count,
-            'customer_id' => $this->customer_id,
             'order_status' => $this->order_status,
             'org_order_id' => $this->org_order_id,
             'sell_amount' => $this->sell_amount,
@@ -86,7 +85,7 @@ class OrderNewSearch extends OrderNew
         ]);
 
         $query->andFilterWhere(['in', 'model_id', $this->model_list])
-            ->andFilterWhere(['in', 'customer_id', $this->customer_list]);
+            ->andFilterWhere(['in', 'hospital_id', $this->hospital_list]);
 
         return $dataProvider;
     }

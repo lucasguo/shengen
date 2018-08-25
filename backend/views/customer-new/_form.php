@@ -20,6 +20,14 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'customer_mobile')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'city_id')->widget(Select2::classname(), [
+        'data' => \backend\models\Region::getFujianCities(),
+        'options' => ['placeholder' => '选择城市'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
+
     <?= $form->field($model, $hospitalField)->widget(Select2::classname(), [
         'data' => \backend\models\Hospital::getHospitalList(),
         'options' => ['placeholder' => '选择医院', 'multiple' => $model->customer_type == \backend\models\CustomerNew::TYPE_COMPANY],

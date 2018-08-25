@@ -221,6 +221,7 @@ WHERE c.customer_id=:cid',
         return $this->render('maintain', [
             'model' => $model,
             'customerName' => $customerName,
+            'customerType' => $customer->customer_type,
         ]);
     }
 

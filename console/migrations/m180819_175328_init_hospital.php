@@ -12,8 +12,10 @@ class m180819_175328_init_hospital extends Migration
      */
     public function safeUp()
     {
-        $regionSql = file_get_contents(__DIR__ . '/hospital.sql');
-        $this->execute($regionSql);
+        $orgSql = file_get_contents(__DIR__ . '/hospital.sql');
+        $hospitalSql = mb_convert_encoding($orgSql, 'UTF-8',
+            mb_detect_encoding($orgSql, 'UTF-8, ISO-8859-1', true));
+        $this->execute($hospitalSql);
     }
 
     /**
@@ -21,9 +23,8 @@ class m180819_175328_init_hospital extends Migration
      */
     public function safeDown()
     {
-        echo "m180819_175328_init_hospital cannot be reverted.\n";
-
-        return false;
+        $this->delete('hospital', ['>', 'id', 3]);
+        return true;
     }
 
     /*

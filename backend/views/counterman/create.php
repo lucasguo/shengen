@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Hospital */
+/* @var $model backend\models\Counterman */
 
-$this->title = '创建医院';
-$this->params['breadcrumbs'][] = ['label' => '医院管理', 'url' => ['index']];
+$this->title = '创建业务员';
+$this->params['breadcrumbs'][] = ['label' => 'Countermen', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hospital-create">
+<div class="counterman-create">
     <p>
         <?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
     </p>

@@ -9,7 +9,9 @@ use yii\widgets\ActiveForm;
 $this->title = "添加维护记录： " . $customerName;
 ?>
 <div class="customer-maintain">
-
+    <p>
+        <?= Html::a('返回', ['index', 'type' => $customerType], ['class' => 'btn btn-default']) ?>
+    </p>
     <div class="box">
     	<div class="box-body">
     <?php $form = ActiveForm::begin(); ?>

@@ -2,17 +2,15 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-use backend\models\OrderNew;
-use backend\models\ProductModel;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\OrderNewSearch */
+/* @var $searchModel backend\models\CountermanSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '备案单管理';
+$this->title = '业务员管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="order-new-index">
+<div class="counterman-index">
 
     <div id="search_container" style="display: none">
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -21,9 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('返回', ['/site/index'], ['class' => 'btn btn-default']) ?>
         <?= Html::button('搜索开关', ['class' => 'btn btn-primary', 'id' => 'search_toggle']) ?>
-        <?= Html::a('创建备案单', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('创建业务员', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    状态: <span class="order-init">备案</span>&nbsp;<span class="order-deal">成交</span>
     <div class="box">
     	<div class="box-body">
     <?= GridView::widget([
@@ -35,29 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\SerialColumn',
                 'contentOptions' => ['class' => 'hidden-xs'],
             ],
-            [
-                'attribute' => 'model_id',
-                'format' => 'raw',
-                'value' => function ($model, $key, $index, $column) {
-                    if ($model->order_status == OrderNew::STATUS_INIT) {
-                        $class = 'order-init';
-                    } else {
-                        $class = 'order-deal';
-                    }
-                    return Html::tag('span', ProductModel::getFullProductModelName($model->model_id), ['class' => $class]);
-                },
-            ],
-            [
-                'attribute' => 'hospital_id',
-                'value' => 'hospital.hospital_name',
-            ],
-            [
-                'attribute' => 'created_at',
-                'format' => 'datetime',
-            ],
+            'counterman_name',
+            // 'created_by',
+            // 'updated_by',
+
             [
                 'class' => 'kartik\grid\ActionColumn',
-                'template' => '{view} {update} {delete} {deal}',
+                'template' => '{view} {update} {delete}',
                 'buttons' => [
                     'view' => function ($url, $model, $key) {
                         return Html::a('【明细】', $url);
@@ -71,13 +52,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         'data-method' => 'post',
                         ];
                         return Html::a('【删除】', $url, $options);
-                    },
-                    'deal' => function ($url, $model, $key) {
-                        if ($model->order_status == \backend\models\OrderNew::STATUS_INIT) {
-                            return Html::a('【成交】', \yii\helpers\Url::to(['deal', 'id' => $key]));
-                        } else {
-                            return "";
-                        }
                     },
                 ],
             ],

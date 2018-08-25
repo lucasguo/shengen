@@ -5,22 +5,21 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Hospital;
+use backend\models\Counterman;
 
 /**
- * HospitalSearch represents the model behind the search form about `backend\models\Hospital`.
+ * CountermanSearch represents the model behind the search form about `backend\models\Counterman`.
  */
-class HospitalSearch extends Hospital
+class CountermanSearch extends Counterman
 {
-    public $hospital_city_list;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id', 'hospital_province', 'hospital_city', 'hospital_district', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
-            [['hospital_name', 'comment', 'hospital_city_list'], 'safe'],
+            [['id', 'city_id', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['counterman_name'], 'safe'],
         ];
     }
 
@@ -33,13 +32,6 @@ class HospitalSearch extends Hospital
         return Model::scenarios();
     }
 
-    public function attributeLabels()
-    {
-        $labels = parent::attributeLabels();
-        $labels['hospital_city_list'] = '医院所在城市';
-        return $labels;
-    }
-
     /**
      * Creates data provider instance with search query applied
      *
@@ -49,13 +41,12 @@ class HospitalSearch extends Hospital
      */
     public function search($params)
     {
-        $query = Hospital::find();
+        $query = Counterman::find();
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['hospital_city'=>SORT_ASC]],
         ]);
 
         $this->load($params);
@@ -69,18 +60,14 @@ class HospitalSearch extends Hospital
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'hospital_province' => $this->hospital_province,
-            'hospital_city' => $this->hospital_city,
-            'hospital_district' => $this->hospital_district,
+            'city_id' => $this->city_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'created_by' => $this->created_by,
             'updated_by' => $this->updated_by,
         ]);
 
-        $query->andFilterWhere(['like', 'hospital_name', $this->hospital_name])
-            ->andFilterWhere(['like', 'comment', $this->comment])
-            ->andFilterWhere(['in', 'hospital_city', $this->hospital_city_list]);
+        $query->andFilterWhere(['like', 'counterman_name', $this->counterman_name]);
 
         return $dataProvider;
     }

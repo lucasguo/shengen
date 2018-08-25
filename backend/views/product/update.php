@@ -11,7 +11,9 @@ $this->params['breadcrumbs'][] = ['label' => $model->product_name, 'url' => ['vi
 $this->params['breadcrumbs'][] = '修改产品';
 ?>
 <div class="machine-product-update">
-
+    <p>
+        <?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
+    </p>
     <div class="box">
     	<div class="box-body">
     <?= $this->render('_form', [

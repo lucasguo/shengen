@@ -22,7 +22,9 @@ $this->params['breadcrumbs'][] = ['label' => $model-><?= $generator->getNameAttr
 $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
-
+    <p>
+        <?= "<?= " ?>Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
+    </p>
     <div class="box">
     	<div class="box-body">
     <?= "<?= " ?>$this->render('_form', [

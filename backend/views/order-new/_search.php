@@ -1,11 +1,10 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-use kartik\select2\Select2;
 use backend\models\OrderNew;
 use backend\models\ProductModel;
-use backend\models\CustomerNew;
+use kartik\select2\Select2;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\OrderNewSearch */
@@ -27,9 +26,9 @@ use backend\models\CustomerNew;
         ],
     ]); ?>
 
-    <?= $form->field($model, 'customer_list')->widget(Select2::classname(), [
-        'data' => CustomerNew::getAllCustomers(),
-        'options' => ['placeholder' => '选择客户', 'multiple' => true],
+    <?= $form->field($model, 'hospital_list')->widget(Select2::classname(), [
+        'data' => \backend\models\Hospital::getHospitalList(),
+        'options' => ['placeholder' => '选择医院', 'multiple' => true],
         'pluginOptions' => [
             'allowClear' => true
         ],

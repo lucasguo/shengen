@@ -60,7 +60,7 @@ use backend\models\CustomerNew;
 //	                		['label' => '配件管理', 'url' => ['/part/index'], 'visible' => Yii::$app->user->can('manageMachine')],
 //	                	],
 //                	],
-                	['label' => '备案单管理', 'icon' => 'file-text', 'url' => ['/order-new/index'], 'visible' => Yii::$app->user->can('adminSite')],
+                	['label' => '备案管理', 'icon' => 'file-text', 'url' => ['/order-new/index'], 'visible' => Yii::$app->user->can('adminSite')],
 //                    ['label' => '文章管理', 'icon' => 'book', 'url' => ['/article/index'], 'visible' => (Yii::$app->user->can('maintainArticle'))],
 //                    ['label' => '用户管理', 'icon' => 'users', 'url' => ['/user/index'], 'visible' => Yii::$app->user->can('manageUser')],
 //                	[
@@ -83,9 +83,10 @@ use backend\models\CustomerNew;
 	                	'visible' => Yii::$app->user->can('adminSite'),
 	                	'items' => [
 	                		['label' => '产品管理', 'url' => ['/product/index'], 'visible' => Yii::$app->user->can('adminSite')],
-                            ['label' => '产品型号管理', 'url' => ['/product-model/index'], 'visible' => Yii::$app->user->can('adminSite')],
-	                		['label' => '配件类型管理', 'url' => ['/part-type/index'], 'visible' => Yii::$app->user->can('adminSite')],
+                            ['label' => '型号管理', 'url' => ['/product-model/index'], 'visible' => Yii::$app->user->can('adminSite')],
+//	                		['label' => '配件类型管理', 'url' => ['/part-type/index'], 'visible' => Yii::$app->user->can('adminSite')],
 	                		['label' => '医院管理', 'url' => ['/hospital/index'], 'visible' => Yii::$app->user->can('adminSite')],
+                            ['label' => '业务员管理', 'url' => ['/counterman/index'], 'visible' => Yii::$app->user->can('adminSite')],
 	                	],
                 	],
                 ],

@@ -13,13 +13,14 @@ use backend\models\CustomerNew;
 class CustomerNewSearch extends CustomerNew
 {
     public $hospital_list;
+    public $over_month;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'created_at', 'updated_at', 'over_month'], 'integer'],
             [['customer_name', 'customer_mobile', 'customer_company', 'customer_job', 'comment', 'hospital_list'], 'safe'],
         ];
     }
@@ -37,6 +38,7 @@ class CustomerNewSearch extends CustomerNew
     {
         $labels =  parent::attributeLabels();
         $labels['hospital_list'] = '关联医院';
+        $labels['over_month'] = '未维护时间超过（月）';
         return $labels;
     }
 
@@ -49,13 +51,14 @@ class CustomerNewSearch extends CustomerNew
      */
     public function search($params)
     {
-        $query = CustomerNew::find()->distinct()->leftJoin(CustomerHospitalMapping::tableName(), CustomerNew::tableName() . '.id = ' . CustomerHospitalMapping::tableName() . '.customer_id');
+        $query = CustomerNew::find()->distinct()->leftJoin(CustomerHospitalMapping::tableName(), CustomerNew::tableName() . '.id = ' . CustomerHospitalMapping::tableName() . '.customer_id')
+            ->leftJoin(CustomerMaintainNew::tableName(), CustomerNew::tableName() . '.id = ' . CustomerMaintainNew::tableName() . '.customer_id');
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['updated_at'=>SORT_DESC]],
+            'sort'=> ['defaultOrder' => ['city_id'=>SORT_ASC]],
         ]);
 
         $this->load($params);
@@ -81,6 +84,16 @@ class CustomerNewSearch extends CustomerNew
             ->andFilterWhere(['like', 'comment', $this->comment])
             ->andFilterWhere(['in', 'hospital_id', $this->hospital_list]);
 
+        if ($this->over_month != null) {
+            $over_seconds = $this->over_month * 30 * 24 * 60 ^ 60;
+            $query->andFilterWhere(['>', 'CURRENT_TIMESTAMP - `customer_maintain_new`.`created_at`', $over_seconds]);
+        }
+
         return $dataProvider;
+    }
+
+    public static function getMonthList()
+    {
+        return [1, 3, 6, 12];
     }
 }

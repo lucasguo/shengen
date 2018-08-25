@@ -30,6 +30,8 @@ use kartik\select2\Select2;
         ],
     ]); ?>
 
+    <?= $form->field($model, 'over_month')->dropDownList(\backend\models\CustomerNewSearch::getMonthList(), ['prompt' => '请选择']) ?>
+
     <?php // echo $form->field($model, 'comment') ?>
 
     <?php // echo $form->field($model, 'created_at') ?>

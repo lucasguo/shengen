@@ -61,7 +61,7 @@ class CustomerNew extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['customer_name', 'customer_mobile'], 'required'],
+            [['customer_name', 'customer_mobile', 'city_id'], 'required'],
             [['comment'], 'string'],
             [['created_at', 'updated_at', 'city_id', 'hospital_id'], 'integer'],
             [['customer_name'], 'string', 'max' => 10],
@@ -214,9 +214,31 @@ class CustomerNew extends \yii\db\ActiveRecord
         return ArrayHelper::map($result, 'id', 'customer_name');
     }
 
+    public static function getAllDealers()
+    {
+        $result = static::find()->where(['customer_type'=> CustomerNew::TYPE_COMPANY])->asArray()->all();
+        return ArrayHelper::map($result, 'id', 'customer_name');
+    }
+
     public static function getAllCustomers()
     {
         $result = static::find()->asArray()->all();
         return ArrayHelper::map($result, 'id', 'customer_name');
+    }
+
+    public function getCity()
+    {
+        return $this->hasOne(Region::class, ['id' => 'city_id']);
+    }
+
+    public function getDisplayName()
+    {
+        if ($this->customer_type == static::TYPE_COMPANY) {
+            return ($this->city ? $this->city->name : '') . ' - ' . $this->customer_name . ' - ' . $this->customer_company;
+        } elseif ($this->customer_type == static::TYPE_PATIENT) {
+            return ($this->city ? $this->city->name : '') . ' - ' . $this->customer_name;
+        } elseif ($this->customer_type == static::TYPE_HOSPITAL) {
+            return ($this->city ? $this->city->name : '') . ' - ' . $this->customer_name . ' - ' . ($this->getHospital());
+        }
     }
 }

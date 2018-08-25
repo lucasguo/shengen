@@ -3,17 +3,17 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\OrderNew;
-use backend\models\OrderNewSearch;
+use backend\models\Counterman;
+use backend\models\CountermanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 /**
- * OrderNewController implements the CRUD actions for OrderNew model.
+ * CountermanController implements the CRUD actions for Counterman model.
  */
-class OrderNewController extends Controller
+class CountermanController extends Controller
 {
     /**
      * @inheritdoc
@@ -31,12 +31,12 @@ class OrderNewController extends Controller
     }
 
     /**
-     * Lists all OrderNew models.
+     * Lists all Counterman models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new OrderNewSearch();
+        $searchModel = new CountermanSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -46,45 +46,37 @@ class OrderNewController extends Controller
     }
 
     /**
-     * Displays a single OrderNew model.
+     * Displays a single Counterman model.
      * @param integer $id
      * @return mixed
      */
     public function actionView($id)
     {
-        $model = $this->findModel($id);
-        $orgModel = null;
-        if ($model->order_status == OrderNew::STATUS_DEAL && $model->org_order_id != null) {
-            $orgModel = $this->findModel($model->org_order_id);
-        }
         return $this->render('view', [
-            'model' => $model,
-            'orgModel' => $orgModel,
+            'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new OrderNew model.
+     * Creates a new Counterman model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new OrderNew();
+        $model = new Counterman();
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->order_status = OrderNew::STATUS_INIT;
-            if ($model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**
-     * Updates an existing OrderNew model.
+     * Updates an existing Counterman model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -102,51 +94,29 @@ class OrderNewController extends Controller
         }
     }
 
-    public function actionDeal($id)
-    {
-        $orgModel = $this->findModel($id);
-        $model = new OrderNew();
-        $model->copyFromOrg($orgModel);
-        $model->order_status = OrderNew::STATUS_DEAL;
-        $model->scenario = 'deal';
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('deal', [
-                'model' => $model,
-            ]);
-        }
-    }
-
     /**
-     * Deletes an existing OrderNew model.
+     * Deletes an existing Counterman model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
     public function actionDelete($id)
     {
-
-        $model = $this->findModel($id);
-        if ($model->org_order_id != null) {
-            $this->findModel($model->org_order_id)->delete();
-        }
-        $model->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the OrderNew model based on its primary key value.
+     * Finds the Counterman model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return OrderNew the loaded model
+     * @return Counterman the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = OrderNew::findOne($id)) !== null) {
+        if (($model = Counterman::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

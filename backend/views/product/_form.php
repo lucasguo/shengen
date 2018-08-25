@@ -23,37 +23,37 @@ use yii\web\View;
     
     <?= $form->field($model, 'product_status')->dropDownList(MachineProduct::getStatusList()) ?>
     
-    <?= $form->field($prodForm, 'partType1')->widget("backend\widgets\PopupInput", [
-    	"popupUrl" => "lookup/part-type",
-    	"jsCallback" => "updatePartType1",
-    	"textId" => "type1name",
-    	"hiddenId" => "type1id",
-    	"textValue" => $prodForm->getPartTypeName(1),
-    ])?>
-    
-    <?= $form->field($prodForm, 'partType2')->widget("backend\widgets\PopupInput", [
-    	"popupUrl" => "lookup/part-type",
-    	"jsCallback" => "updatePartType2",
-    	"textId" => "type2name",
-    	"hiddenId" => "type2id",
-    	"textValue" => $prodForm->getPartTypeName(2),
-    ])?>
-    
-    <?= $form->field($prodForm, 'partType3')->widget("backend\widgets\PopupInput", [
-    	"popupUrl" => "lookup/part-type",
-    	"jsCallback" => "updatePartType3",
-    	"textId" => "type3name",
-    	"hiddenId" => "type3id",
-    	"textValue" => $prodForm->getPartTypeName(3),
-    ])?>
-    
-    <?= $form->field($prodForm, 'partType4')->widget("backend\widgets\PopupInput", [
-    	"popupUrl" => "lookup/part-type",
-    	"jsCallback" => "updatePartType4",
-    	"textId" => "type4name",
-    	"hiddenId" => "type4id",
-    	"textValue" => $prodForm->getPartTypeName(4),
-    ])?>
+<!--    --><?//= $form->field($prodForm, 'partType1')->widget("backend\widgets\PopupInput", [
+//    	"popupUrl" => "lookup/part-type",
+//    	"jsCallback" => "updatePartType1",
+//    	"textId" => "type1name",
+//    	"hiddenId" => "type1id",
+//    	"textValue" => $prodForm->getPartTypeName(1),
+//    ])?>
+<!--    -->
+<!--    --><?//= $form->field($prodForm, 'partType2')->widget("backend\widgets\PopupInput", [
+//    	"popupUrl" => "lookup/part-type",
+//    	"jsCallback" => "updatePartType2",
+//    	"textId" => "type2name",
+//    	"hiddenId" => "type2id",
+//    	"textValue" => $prodForm->getPartTypeName(2),
+//    ])?>
+<!--    -->
+<!--    --><?//= $form->field($prodForm, 'partType3')->widget("backend\widgets\PopupInput", [
+//    	"popupUrl" => "lookup/part-type",
+//    	"jsCallback" => "updatePartType3",
+//    	"textId" => "type3name",
+//    	"hiddenId" => "type3id",
+//    	"textValue" => $prodForm->getPartTypeName(3),
+//    ])?>
+<!--    -->
+<!--    --><?//= $form->field($prodForm, 'partType4')->widget("backend\widgets\PopupInput", [
+//    	"popupUrl" => "lookup/part-type",
+//    	"jsCallback" => "updatePartType4",
+//    	"textId" => "type4name",
+//    	"hiddenId" => "type4id",
+//    	"textValue" => $prodForm->getPartTypeName(4),
+//    ])?>
 
     
 

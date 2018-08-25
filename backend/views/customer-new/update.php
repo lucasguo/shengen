@@ -13,7 +13,9 @@ $this->params['breadcrumbs'][] = ['label' => $model->customer_name, 'url' => ['v
 $this->params['breadcrumbs'][] = '更新';
 ?>
 <div class="customer-new-update">
-
+    <p>
+        <?= Html::a('返回', ['index', 'type' => $model->customer_type], ['class' => 'btn btn-default']) ?>
+    </p>
     <div class="box">
     	<div class="box-body">
     <?= $this->render('_form', [

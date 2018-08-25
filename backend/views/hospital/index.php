@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
         <p>
+            <?= Html::a('返回', ['/site/index'], ['class' => 'btn btn-default']) ?>
             <?= Html::button('搜索开关', ['class' => 'btn btn-primary', 'id' => 'search_toggle']) ?>
             <?= Html::a('创建医院', ['create'], ['class' => 'btn btn-success']) ?>
         </p>

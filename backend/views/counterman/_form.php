@@ -3,24 +3,25 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use kartik\select2\Select2;
-use backend\models\ProductModel;
-use backend\models\CustomerNew;
-use backend\models\OrderNew;
-use backend\models\Counterman;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\OrderNew */
+/* @var $model backend\models\Counterman */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="order-new-form">
+<div class="counterman-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $this->render('_commonfield', [
-        'form' => $form,
-        'model' => $model,
-    ]) ?>
+    <?= $form->field($model, 'counterman_name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'city_id')->widget(Select2::classname(), [
+        'data' => \backend\models\Region::getFujianCities(),
+        'options' => ['placeholder' => '选择一个城市'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <div class="form-group text-center">
         <?= Html::submitButton($model->isNewRecord ? '创建' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

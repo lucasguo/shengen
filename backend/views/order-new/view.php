@@ -31,13 +31,23 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php
     $abstractAttr = [
         [
+            'attribute' => 'counterman_id',
+            'value' => $model->counterman ? $model->counterman->counterman_name : null,
+        ],
+        [
+            'attribute' => 'dealer_id',
+            'value' => $model->dealer ? $model->dealer->customer_name : null,
+        ],
+        [
+            'attribute' => 'hospital_id',
+            'value' => $model->hospital->hospital_name,
+        ],
+        'office',
+        [
             'attribute' => 'model_id',
             'value' => ProductModel::getFullProductModelName($model->model_id),
         ],
-        [
-            'attribute' => 'customer_id',
-            'value' => $model->customer->customer_name,
-        ],
+        'orderDate',
         [
             'attribute' => 'created_at',
             'format' => 'datetime',
@@ -45,14 +55,23 @@ $this->params['breadcrumbs'][] = $this->title;
     ];
     $fullAttr = [
         [
+            'attribute' => 'counterman_id',
+            'value' => $model->counterman ? $model->counterman->counterman_name : null,
+        ],
+        [
+            'attribute' => 'dealer_id',
+            'value' => $model->dealer ? $model->dealer->customer_name : null,
+        ],
+        [
+            'attribute' => 'hospital_id',
+            'value' => $model->hospital->hospital_name,
+        ],
+        'office',
+        [
             'attribute' => 'model_id',
             'value' => ProductModel::getFullProductModelName($model->model_id),
         ],
-        'sell_count',
-        [
-            'attribute' => 'customer_id',
-            'value' => $model->customer->customer_name,
-        ],
+        'orderDate',
         [
             'attribute' => 'sell_amount',
             'format' => 'currency',

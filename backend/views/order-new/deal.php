@@ -5,6 +5,8 @@ use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
 use backend\models\ProductModel;
 use backend\models\CustomerNew;
+use backend\models\Counterman;
+use backend\models\OrderNew;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\OrderNew */
@@ -15,30 +17,19 @@ $this->params['breadcrumbs'][] = ['label' => '查看备案单', 'url' => ['view'
 $this->params['breadcrumbs'][] = '成交';
 ?>
 <div class="order-new-update">
-
+    <p>
+        <?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>
+    </p>
     <div class="box">
     	<div class="box-body">
             <div class="order-new-form">
 
                 <?php $form = ActiveForm::begin(); ?>
 
-                <?= $form->field($model, 'model_id')->widget(Select2::classname(), [
-                    'data' => ProductModel::getAllProductModels(),
-                    'options' => ['placeholder' => '选择型号'],
-                    'pluginOptions' => [
-                        'allowClear' => true
-                    ],
-                ]); ?>
-
-                <?= $form->field($model, 'customer_id')->widget(Select2::classname(), [
-                    'data' => CustomerNew::getAllCustomers(),
-                    'options' => ['placeholder' => '选择客户'],
-                    'pluginOptions' => [
-                        'allowClear' => true
-                    ],
-                ]); ?>
-
-                <?= $form->field($model, 'sell_count')->textInput() ?>
+                <?= $this->render('_commonfield', [
+                    'form' => $form,
+                    'model' => $model,
+                ]) ?>
 
                 <?= $form->field($model, 'sell_amount')->textInput() ?>
 

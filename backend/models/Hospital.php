@@ -82,7 +82,7 @@ class Hospital extends \yii\db\ActiveRecord
 
     public static function getHospitalList()
     {
-        $result = static::find()->asArray()->all();
+        $result = static::find()->orderBy('hospital_city')->asArray()->all();
         return ArrayHelper::map($result, 'id', 'hospital_name');
     }
 

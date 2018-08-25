@@ -26,7 +26,7 @@ class m180825_084223_update_city extends Migration
         ON
           m.hospital_id = h.id
         GROUP by c.id);
-        UPDATE CUSTOMER_NEW c
+        UPDATE customer_new c
         LEFT JOIN ID_CITY_MAPPING m on c.id = m.id
         SET c.city_id = m.hospital_city;
         ");
@@ -40,7 +40,7 @@ class m180825_084223_update_city extends Migration
         update region set id = 18380 where id = 1362;
         update region set id = 18381 where id = 1317;
         update region set id = 18382 where id = 1352;
-        update region set id = 18383 where id = 1379;
+        update region set id = 18383 where id = 1370;
         
         update region set parent_id = 18375 where parent_id = 1303;
         update region set parent_id = 18376 where parent_id = 1329;
@@ -50,7 +50,7 @@ class m180825_084223_update_city extends Migration
         update region set parent_id = 18380 where parent_id = 1362;
         update region set parent_id = 18381 where parent_id = 1317;
         update region set parent_id = 18382 where parent_id = 1352;
-        update region set parent_id = 18383 where parent_id = 1379;
+        update region set parent_id = 18383 where parent_id = 1370;
         
         update customer_new set city_id = 18375 where city_id = 1303;
         update customer_new set city_id = 18376 where city_id = 1329;
@@ -60,7 +60,7 @@ class m180825_084223_update_city extends Migration
         update customer_new set city_id = 18380 where city_id = 1362;
         update customer_new set city_id = 18381 where city_id = 1317;
         update customer_new set city_id = 18382 where city_id = 1352;
-        update customer_new set city_id = 18383 where city_id = 1379;
+        update customer_new set city_id = 18383 where city_id = 1370;
         
         update hospital set hospital_city = 18375 where hospital_city = 1303;
         update hospital set hospital_city = 18376 where hospital_city = 1329;
@@ -70,7 +70,7 @@ class m180825_084223_update_city extends Migration
         update hospital set hospital_city = 18380 where hospital_city = 1362;
         update hospital set hospital_city = 18381 where hospital_city = 1317;
         update hospital set hospital_city = 18382 where hospital_city = 1352;
-        update hospital set hospital_city = 18383 where hospital_city = 1379;
+        update hospital set hospital_city = 18383 where hospital_city = 1370;
         ");
     }
 

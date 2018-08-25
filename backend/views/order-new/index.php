@@ -9,7 +9,7 @@ use backend\models\ProductModel;
 /* @var $searchModel backend\models\OrderNewSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '备案单管理';
+$this->title = '备案管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-new-index">

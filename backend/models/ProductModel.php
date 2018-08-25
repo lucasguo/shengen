@@ -77,7 +77,7 @@ class ProductModel extends \yii\db\ActiveRecord
         SELECT CONCAT(p.product_name, \' - \', m.model_name) as model_name
         FROM product_model m 
         LEFT JOIN machine_product p ON p.id = m.product_id
-        WHERE p.id = :id
+        WHERE m.id = :id
         ', [':id' => $id])->one();
         return $result->model_name;
     }

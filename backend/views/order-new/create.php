@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model backend\models\OrderNew */
 
 $this->title = '创建备案单';
-$this->params['breadcrumbs'][] = ['label' => '备案单管理', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '备案管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-new-create">

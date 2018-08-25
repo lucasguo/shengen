@@ -64,7 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
         [
             'attribute' => 'hospital_id',
-            'value' => $model->hospital->hospital_name,
+            'value' => $model->hospital ? $model->hospital->hospital_name : null,
         ],
         'office',
         [
